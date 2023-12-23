@@ -16,11 +16,11 @@ const AboveHeader = () => {
       <div id="div-text">
         <PhoneOutlined />
         <div id="text">
-          <span style={{ paddingRight: "20px" }}>+92 300 9596 802</span>
+          <span style={{ padding: "0px 30px 0px 10px" }}>+92 300 9596 802</span>
         </div>
         <MailOutline />
         <div id="text">
-          <span style={{ paddingRight: "20px" }}>
+          <span style={{ padding: "0px 30px 0px 10px" }}>
             contact@irtaqadesigns.com
           </span>
         </div>

@@ -1,27 +1,40 @@
-  
-  .main-nav {
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+    }
+  }
+
+  .navbar{
     display: flex;
-    justify-content: space-between;
+    border-top: 5px solid #8B0000;
+    border-bottom: 5px solid #8B0000;
+  }
+
+  .menu {
+    background-color: #fff;
+    color: #8B0000;
+    display: flex;
     align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    z-index: 100;
+    flex: 25%;
   }
-  
+
   .logo {
-    /* Add styles for the logo here, such as width, height, etc. */
-  }
-  
-  .nav-links {
-    list-style: none;
+    flex: 25%;
     display: flex;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    font-weight: bolder;
+    font-size: 24px;
+    color: #8B0000;  
   }
   
-  .nav-links li {
-    margin-left: 20px; /* Space between navigation links */
-  }
-  
-  .nav-links a {
+  a {
     text-decoration: none;
-    color: #333; /* Replace with the actual color */
+    font-size: 18px;
+    color: #8B0000; /* Replace with the actual color */
     font-weight: bold; /* Adjust as needed */
   }

@@ -10,7 +10,7 @@ import {
 import AboveHeader from "../AboveHeader/AboveHeader";
 const Header = () => {
   return (
-    <section className="header">
+    <div className="header-div">
       <AboveHeader />
       <header>
         <div className="header-container-main">
@@ -52,7 +52,7 @@ const Header = () => {
         </div>
         <NavBar />
       </header>
-    </section>
+    </div>
   );
 };
 

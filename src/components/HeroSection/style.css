@@ -2,58 +2,72 @@
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh; /* Adjust the height as needed */
+    height: 53.5vh;
     width: 100%;
     overflow: hidden;
   }
-  
-  .hero-video {
+  .hero-video, .hero-overlay, .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
+  .hero-video {
+    z-index: 1;
+  }
+  
   .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    z-index: 2; /* Adjust the z-index as needed */
     background: rgba(0, 0, 0, 0.5); /* Dark overlay */
   }
   
   .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    z-index: 3; /* Adjust the z-index as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
     color: white;
+    text-align: center;
   }
   
   .hero-title {
-    font-size: 3rem; /* Adjust size as needed */
+    font-size: 3rem;
     margin-bottom: 1rem;
-    /* Add your animation styles here */
+    white-space: normal; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow text */
+    width: 0; /* Set initial width to 0 */
+    animation: typing 8s steps(30, end) infinite, blink-caret .75s step-end infinite;
   }
   
-  .animate-text {
-    /* Example of a simple fade-in animation */
-    animation: fadeIn 2s ease-in-out forwards;
+  @keyframes typing {
+    0% { width: 0; }
+    62.5% { width: 100%; } /* 5s out of 8s is 62.5% */
+    100% { width: 100%; }
   }
   
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+  
+  /* border-right: .15em solid orange;
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: red }
+    } */
+    
   
   .hero-button {
-    padding: 10px 20px;
+    padding: 20px 20px;
     font-size: 1rem;
+    border-radius: 50px;
     color: white;
     background: #ff0000; /* Adjust the color as needed */
     border: none;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s;
   }
   

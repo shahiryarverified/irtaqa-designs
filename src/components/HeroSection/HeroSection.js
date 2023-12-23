@@ -1,16 +1,41 @@
 import React from "react";
 import "./style.css"; // Assuming your CSS is in App.css
+import video from "../../assets/construction.mp4";
+import "@mui/icons-material";
+import { ArrowDownward } from "@mui/icons-material";
 
 function HeroSection() {
+  let isText1 = true;
+
+  setInterval(() => {
+    const text1 = document.getElementById("text1");
+    const text2 = document.getElementById("text2");
+
+    if (isText1) {
+      text1.style.display = "none";
+      text2.style.display = "inline";
+    } else {
+      text1.style.display = "inline";
+      text2.style.display = "none";
+    }
+
+    isText1 = !isText1;
+  }, 8000);
+
   return (
     <div className="hero-section">
       <video autoPlay loop muted className="hero-video">
-        <source src="video.mp4" type="video/mp4" />
+        <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h1 className="hero-title animate-text">We Provide</h1>
+        <span id="text1" className="hero-title">
+          We Provide Our Undersanding and Construction Services.
+        </span>
+        <span id="text2" style={{ display: "none" }} className="hero-title">
+          We Are professional for building Construction.
+        </span>
         <button
           className="hero-button"
           onClick={() =>
@@ -20,7 +45,7 @@ function HeroSection() {
             })
           }
         >
-          Learn More
+          <ArrowDownward />
         </button>
       </div>
     </div>
