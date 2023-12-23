@@ -1,0 +1,37 @@
+/* CSS for the "Our Story" section */
+.story {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fff; /* Adjust the color to match your design */
+  }
+  
+  .story-content {
+    max-width: 50%;
+  }
+  
+  .story-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .story-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333; /* Adjust the color to match your design */
+  }
+  
+  .story-content h3 {
+    font-size: 1.5em;
+    margin-top: 40px;
+  }
+  
+  .story-image {
+    max-width: 50%;
+  }
+  
+  .story-image img {
+    width: 100%;
+    height: auto;
+  }

@@ -1,0 +1,64 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-section {
+    /* Adjust as needed */
+  }
+  
+  .footer-logo {
+    /* Logo styles */
+    margin-bottom: 10px;
+  }
+  
+  .links-section {
+    display: flex;
+    /* Adjust as needed */
+  }
+  
+  .footer-column {
+    margin-right: 20px;
+  }
+  
+  .footer-column h4 {
+    margin: 0;
+    padding: 5px 0;
+    /* Add more styles as needed */
+  }
+  
+  .social-section {
+    /* Adjust as needed */
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    /* Add more styles as needed */
+  }
+  
+  .social-icon img {
+    width: 24px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  .footer-map {
+    /* Styles for your map container */
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    /* Add more styles as needed */
+  }

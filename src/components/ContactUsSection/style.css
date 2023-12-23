@@ -1,0 +1,54 @@
+.contact-us-section {
+    background-color: #D32F2F; /* Adjust the color to match the exact shade */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .contact-us-section h2 {
+    font-size: 36px; /* Adjust the size as needed */
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    max-width: 300px; /* Adjust width as needed */
+  }
+  
+  .contact-info h3 {
+    font-size: 24px; /* Adjust the size as needed */
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  .social-icons {
+    /* Style for social icons */
+  }
+  
+  .contact-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px; /* Adjust as needed */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Adjust color as needed */
+    border-radius: 5px; /* Adjust as needed */
+  }
+  
+  .contact-form button {
+    background-color: #D32F2F; /* Adjust the color to match the exact shade */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px; /* Adjust as needed */
+  }

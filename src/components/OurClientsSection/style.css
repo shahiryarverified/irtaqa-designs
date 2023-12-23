@@ -1,0 +1,35 @@
+.our-clients-section {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .slideshow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slideshow-slider {
+    display: flex;
+    animation: slide-animation 30s linear infinite;
+  }
+  
+  .slide {
+    min-width: 100%; /* Adjust the width of each slide */
+    transition: transform 0.5s ease;
+  }
+  
+  /* Keyframes for the sliding animation */
+  @keyframes slide-animation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / 3)); /* Adjust the percentage based on the number of images */
+    }
+  }
