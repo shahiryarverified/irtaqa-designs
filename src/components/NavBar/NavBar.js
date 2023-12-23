@@ -15,11 +15,6 @@ const NavBar = () => {
           // padding: "10px 50px",
         }}
       >
-        <img
-          src="logo-path"
-          alt="Irtiqa Designs Logo"
-          style={{ height: "50px" }}
-        />
         <div style={{ display: "flex", alignItems: "center" }}>
           <a
             href="#home"

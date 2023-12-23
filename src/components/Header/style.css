@@ -1,44 +1,3 @@
-.app-header {
-    background-color: #fff; /* Replace with the actual color */
-    padding: 10px 20px; /* Adjust the padding as needed */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* This adds a subtle shadow to the header */
-  }
-  
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px; /* Adjust as needed */
-    background-color: #000; /* Assuming a black background as seen in the image */
-    color: white;
-  }
-  
-  .main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    /* Add styles for the logo here, such as width, height, etc. */
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin-left: 20px; /* Space between navigation links */
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333; /* Replace with the actual color */
-    font-weight: bold; /* Adjust as needed */
-  }
   
 @media (max-width: 768px) {
   .header {
@@ -65,13 +24,57 @@
 #header-container-icon {
   font-size: 80px;
   color: #F00000;
-  margin-bottom: 30px; /* Space between icon and text */
+  margin-top: 20px; /* Space between icon and text */
+  margin-bottom: 15px; /* Space between icon and text */
 }
 
 .header-container-text {
+  padding: 0px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center text */
   font-size: 24px; /* Increase the font size */
   font-weight: bold; /* Make the text bold */
+}
+
+.header-container-right{
+  display: flex;
+  flex-direction: row;
+  background-color: #8B0000;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  flex: 65%;
+}
+
+.header-container-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  flex: 35%;
+  position: relative;
+}
+
+#header-container-left-icon{
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  font-size: 80px;
+  color: #F00000;
+  z-index: 1;
+}
+
+.header-container-left-background{
+  position: absolute;
+  display: flex;
+  top: 0; left: 0; width: 100%; height: 100%; background-color: red;
+  background-color: #8B0000;
+  clip-path: polygon(50% 100%, 100% 0%, 100% 100%);
+  z-index: 0;
+}
+
+.header-container-main
+{
+  display: flex;
+  flex-direction: row;
 }

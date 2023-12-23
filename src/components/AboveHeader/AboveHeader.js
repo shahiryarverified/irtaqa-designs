@@ -15,15 +15,21 @@ const AboveHeader = () => {
     <section id="main">
       <div id="div-text">
         <PhoneOutlined />
-        <span style={{ paddingRight: "20px" }}>+92 300 9596 802</span>
+        <div id="text">
+          <span style={{ paddingRight: "20px" }}>+92 300 9596 802</span>
+        </div>
         <MailOutline />
-        <span style={{ paddingRight: "20px" }}>contact@irtaqadesigns.com</span>
+        <div id="text">
+          <span style={{ paddingRight: "20px" }}>
+            contact@irtaqadesigns.com
+          </span>
+        </div>
       </div>
       <div id="div-icons">
-        <FacebookOutlined />
-        <Twitter />
-        <Instagram />
-        <LinkedIn />
+        <FacebookOutlined id="icon" />
+        <Twitter id="icon" />
+        <Instagram id="icon" />
+        <LinkedIn id="icon" />
       </div>
     </section>
   );

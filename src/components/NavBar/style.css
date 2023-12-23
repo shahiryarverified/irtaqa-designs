@@ -1,0 +1,27 @@
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    /* Add styles for the logo here, such as width, height, etc. */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px; /* Space between navigation links */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333; /* Replace with the actual color */
+    font-weight: bold; /* Adjust as needed */
+  }
