@@ -5,7 +5,7 @@ import image from "../../assets/image.jpg";
 import image2 from "../../assets/image2.jpg";
 
 const StorySection = () => {
-  const [activeSection, setActiveSection] = useState("aboutUs");
+  const [activeSection, setActiveSection] = useState("ceoMessage");
 
   return (
     // JSX for the "Our Story" section

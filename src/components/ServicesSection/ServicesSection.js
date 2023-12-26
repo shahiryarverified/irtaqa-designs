@@ -1,34 +1,115 @@
-import React from "react";
 import "./style.css";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
+import service1 from "../../assets/service1.jpg";
+import service2 from "../../assets/service2.jpg";
+import service3 from "../../assets/service3.jpg";
+import service4 from "../../assets/service4.jpg";
+import service5 from "../../assets/service5.jpg";
+import service6 from "../../assets/service6.jpg";
+import service7 from "../../assets/service7.jpg";
+import service8 from "../../assets/service8.jpg";
 
-const ServiceCard = ({ title, icon }) => (
-  <div className="service-card">
-    <div className="icon">{icon}</div>
-    <div className="title">{title}</div>
-  </div>
-);
-
+const ActionAreaCard = ({ serviceName, context, img }) => {
+  return (
+    <Card className="ActionAreaCard">
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={img}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {serviceName}
+          </Typography>
+          <Typography variant="body2" color="#fff">
+            {context}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  );
+};
 const ServicesSection = () => {
   // Placeholder icons. Replace with actual icons or images.
   const icons = ["🏢", "🌆", "💧", "🌍", "🍃", "📐", "📊", "📏"];
 
   const services = [
-    { title: "Building / Structures", icon: icons[0] },
-    { title: "Urban Development", icon: icons[1] },
-    { title: "Water Supply & Sanitation", icon: icons[2] },
-    { title: "Geo Technical", icon: icons[3] },
-    { title: "Environmental", icon: icons[4] },
-    { title: "Planning & Management", icon: icons[5] },
-    { title: "Quantity & Estimation", icon: icons[6] },
-    { title: "Surveying", icon: icons[7] },
+    {
+      title: "Building / Structures",
+      icon: icons[0],
+      description:
+        "Design, construction, and maintenance of various structures, including residential, commercial, and industrial buildings.",
+      image: service1,
+    },
+    {
+      title: "Urban Development",
+      icon: icons[1],
+      description:
+        "Planning and development of urban areas, including infrastructure, housing, and public spaces.",
+      image: service2,
+    },
+    {
+      title: "Water Supply & Sanitation",
+      icon: icons[2],
+      description:
+        "The provision of clean water and sanitation facilities to communities, addressing public health and environmental concerns.",
+      image: service3,
+    },
+    {
+      title: "Geo Technical",
+      icon: icons[3],
+      description:
+        "The study of soil and rock mechanics to support engineering projects such as foundations, slopes, and retaining structures.",
+      image: service4,
+    },
+    {
+      title: "Environmental",
+      icon: icons[4],
+      description:
+        "Projects related to environmental conservation, pollution control, and sustainable resource management.",
+      image: service5,
+    },
+    {
+      title: "Planning & Management",
+      icon: icons[5],
+      description:
+        "Strategic planning, project management, and coordination of various engineering initiatives.",
+      image: service6,
+    },
+    {
+      title: "Quantity & Estimation",
+      icon: icons[6],
+      description:
+        "Around accurate estimation of materials, costs, and resources for construction and engineering projects.",
+      image: service7,
+    },
+    {
+      title: "Surveying",
+      icon: icons[7],
+      description:
+        "Land surveying, mapping, and spatial data collection for construction and development projects.",
+      image: service8,
+    },
   ];
 
   return (
     <section className="services">
-      <h2>Our ServicesSection</h2>
+      <h2>Our Services Section</h2>
       <div className="services-grid">
         {services.map((service, index) => (
-          <ServiceCard key={index} title={service.title} icon={service.icon} />
+          <ActionAreaCard
+            key={index}
+            serviceName={service.title}
+            context={service.description}
+            img={service.image}
+          />
         ))}
       </div>
     </section>
