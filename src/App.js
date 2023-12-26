@@ -14,13 +14,13 @@ function App() {
   return (
     <div>
       <Header />
-      <HeroSection />
-      <StorySection />
-      <Services />
-      <TeamSection />
-      <ProjectsSection />
-      <OurClientsSection />
-      <ContactUsSection />
+      <HeroSection name="hero" />
+      <StorySection name="story" />
+      <Services name="services" />
+      <TeamSection name="team" />
+      <ProjectsSection name="projects" />
+      <OurClientsSection name="clients" />
+      <ContactUsSection name="contact" />
       <Footer />
     </div>
   );

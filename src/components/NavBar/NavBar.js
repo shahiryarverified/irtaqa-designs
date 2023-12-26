@@ -8,13 +8,80 @@ const NavBar = () => {
         <span>IRTIQA DESIGNS</span>
       </div>
       <div className="menu">
-        <a href="#quote">Quote</a>
+        <a href="#quote" id="quoteButton">
+          Quote
+        </a>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
+        <a
+          href="#story"
+          onClick={() => {
+            const targetDiv = document.querySelector(".story-content"); // Replace "yourDivName" with the actual name of your div
+            if (targetDiv) {
+              window.scrollTo({
+                top: targetDiv.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          }}
+        >
+          About
+        </a>
+        <a
+          href="#services"
+          onClick={() => {
+            const targetDiv = document.querySelector(".services"); // Replace "yourDivName" with the actual name of your div
+            if (targetDiv) {
+              window.scrollTo({
+                top: targetDiv.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          }}
+        >
+          Services
+        </a>
+        <a
+          href="#projects"
+          onClick={() => {
+            const targetDiv = document.querySelector(".projects-section"); // Replace "yourDivName" with the actual name of your div
+            if (targetDiv) {
+              window.scrollTo({
+                top: targetDiv.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          }}
+        >
+          Projects
+        </a>
+        <a
+          href="#team"
+          onClick={() => {
+            const targetDiv = document.querySelector(".team-section"); // Replace "yourDivName" with the actual name of your div
+            if (targetDiv) {
+              window.scrollTo({
+                top: targetDiv.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          }}
+        >
+          Team
+        </a>
+        <a
+          href="#contact"
+          onClick={() => {
+            const targetDiv = document.querySelector(".contact-us-section"); // Replace "yourDivName" with the actual name of your div
+            if (targetDiv) {
+              window.scrollTo({
+                top: targetDiv.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          }}
+        >
+          Contact
+        </a>
       </div>
     </div>
   );

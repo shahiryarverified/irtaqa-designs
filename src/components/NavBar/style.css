@@ -4,10 +4,22 @@
     }
   }
 
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, -5px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+
   .navbar{
     display: flex;
-    border-top: 5px solid #8B0000;
-    border-bottom: 5px solid #8B0000;
+    border-top: 3px solid #8B0000;
+    border-bottom: 3px solid #8B0000;
   }
 
   .menu {
@@ -16,9 +28,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 20px;
+    padding: 3px;
     z-index: 100;
-    flex: 25%;
+    flex: 40%;
   }
 
   .logo {
@@ -26,15 +38,37 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 10%;
+    padding-left: 7.5%;
     font-weight: bolder;
     font-size: 24px;
     color: #8B0000;  
   }
   
-  a {
+  .navbar a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     color: #8B0000; /* Replace with the actual color */
-    font-weight: bold; /* Adjust as needed */
+    padding: 3px 16px; /* 3px top and bottom, 16px left and right */
+    background-color: #fff; /* Red background color */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
   }
+  
+  .navbar a:hover {
+    border-radius: 30px;
+    animation: floating 0.5s ease-in-out infinite;
+    color: #fff;
+    background-color: #F00000; /* Back to normal when not hovering */
+  }
+  
+#quoteButton {
+  background :#F00000;
+  color:#fff;
+  min-height: 100%;
+  padding: 8px 30px 0px 30px;
+  border-radius: 30px;
+  transform: translateY(20);
+  margin-right: 10px;
+  transition: .3s ease-in-out;
+}
+
+

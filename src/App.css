@@ -1,0 +1,20 @@
+/* Thin scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Transparent background */
+  ::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent; /* Set the handle background to transparent */
+    border: none; /* Remove the border */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change the handle color on hover */
+  }
