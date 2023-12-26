@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 7.5%;
+    padding-left: 8%;
     font-weight: bolder;
     font-size: 24px;
     color: #8B0000;  
@@ -61,7 +61,7 @@
   }
   
 #quoteButton {
-  background :#F00000;
+  background: linear-gradient(to right, #ff0000, #8B0000);;
   color:#fff;
   min-height: 100%;
   padding: 8px 30px 0px 30px;

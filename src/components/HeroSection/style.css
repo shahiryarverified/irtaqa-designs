@@ -59,11 +59,11 @@
     
   
   .hero-button {
-    padding: 20px 20px;
+    padding: 10px 20px;
     font-size: 1rem;
     border-radius: 50px;
     color: white;
-    background: #ff0000; /* Adjust the color as needed */
+    background: linear-gradient(to right, #ff0000, #8B0000); /* Adjust the color as needed */
     border: none;
     cursor: pointer;
     align-items: center;
