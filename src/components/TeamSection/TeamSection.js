@@ -66,6 +66,12 @@ const TeamSection = () => {
       position: "Electrician",
       image: image1,
     },
+    {
+      id: 8,
+      name: "Olivia Martinez",
+      position: "Plumber",
+      image: image1,
+    },
   ];
 
   return (
