@@ -1,20 +1,37 @@
 import React from "react";
 import "./style.css"; // Make sure to import the CSS file
+import image1 from "../../assets/clients/1.jpeg";
+import image2 from "../../assets/clients/2.jpeg";
+import image3 from "../../assets/clients/3.jpeg";
+import image4 from "../../assets/clients/4.jpeg";
+import image5 from "../../assets/clients/5.jpeg";
+import image6 from "../../assets/clients/6.jpeg";
+import image7 from "../../assets/clients/7.jpeg";
+import image8 from "../../assets/clients/8.jpeg";
+import image9 from "../../assets/clients/9.jpeg";
+import image10 from "../../assets/clients/10.jpeg";
+import image11 from "../../assets/clients/11.jpeg";
 
 const clientImages = [
-  // Add the paths to your client images here
-  "/path-to-client-image-1.png",
-  "/path-to-client-image-2.png",
-  "/path-to-client-image-3.png",
-  // ... more images
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
 ];
 
 const OurClientsSection = () => {
   return (
     <div className="our-clients-section">
       <div className="header">
-        <h5>PEOPLE LOVE US</h5>
-        <h2>Our Clients</h2>
+        <h4>PEOPLE LOVE US</h4>
+        <h1>Our Clients</h1>
       </div>
       <div className="slideshow">
         <div className="slideshow-slider">
