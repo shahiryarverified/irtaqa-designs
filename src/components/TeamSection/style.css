@@ -2,6 +2,7 @@
     text-align: center;
     background-color: #fff; /* Adjust the color to match your design */
     padding: 20px;
+    min-height: 900px;
   }
   
   .team-section h2 {
@@ -59,15 +60,23 @@
     justify-items: center;
     border: 1px solid #f00000;
     border-radius: 2%;
-    margin: 16px;
+    max-height: 300px;
+    margin: 40px 6px 6px 6px;
     transition: transform 0.1s ease-in-out;
   }
 
-  .team-member-profile:hover,
-  .team-member-profile:hover .profile-details p {
+  .team-member-profile:hover {
     color: #fff;
     background-color: #8b0000;
     transform: translateY(-10px) scale(1.05);
+  }
+  
+  .team-member-profile:hover .profile-details p {
+    color: #fff;
+    background-color: #8b0000;
+    /* padding: 10px; */
+    border-radius: 5%;
+    transform: translateY(-57px) scale(1.05);
   }
 
   .team-member-profile {
@@ -96,25 +105,29 @@
     left: 50%;
   }
   
+  .profile-details {
+    max-height: 200px;
+  }
+  
   .profile-image img {
     display: flex;
     width: 100%;
     height: 100%;
     border-radius: 1%;
     object-fit: cover;
-    margin-right: 16px;
   }
   
   .profile-details h3 {
     font-size: 1.75rem;
-    margin-bottom: 4px;
+    transform: translateY(-25px);
   }
   
   .profile-details p {
     color: #666;
     font-size: 0.85rem;
+    transform: translateY(-57px);
   }
   .profile-details h3,
-.profile-details p {
-  user-select: none;
-}
+  .profile-details p {
+    user-select: none;
+  }
