@@ -16,7 +16,7 @@ const TeamMemberProfile = ({ member }) => {
       </div>
       <div className="profile-details">
         <h3>{member.name}</h3>
-        <p>{member.occupation}</p>
+        <p>{member.position}</p>
       </div>
     </div>
   );
@@ -27,37 +27,43 @@ const TeamSection = () => {
     {
       id: 1,
       name: "John Doe",
-      position: "Software Engineer",
+      position: "Construction Worker",
       image: image1,
     },
     {
       id: 2,
       name: "Jane Smith",
-      position: "Product Manager",
+      position: "Site Engineer",
       image: image1,
     },
     {
       id: 3,
       name: "Alex Johnson",
-      position: "UX Designer",
+      position: "Architect",
       image: image1,
     },
     {
       id: 4,
       name: "Emily Brown",
-      position: "Marketing Specialist",
+      position: "Project Manager",
       image: image1,
     },
     {
       id: 5,
       name: "Michael Lee",
-      position: "Data Analyst",
+      position: "Civil Engineer",
       image: image1,
     },
     {
       id: 6,
       name: "Sophia Garcia",
-      position: "Project Manager",
+      position: "Foreman",
+      image: image1,
+    },
+    {
+      id: 7,
+      name: "William Clark",
+      position: "Electrician",
       image: image1,
     },
   ];
@@ -70,7 +76,7 @@ const TeamSection = () => {
           <TeamMemberProfile key={member.id} member={member} />
         ))}
       </div>
-      <button className="show-all-btn">Show All</button>
+      {/* <button className="show-all-btn">Show All</button> */}
     </div>
   );
 };

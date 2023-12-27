@@ -101,7 +101,7 @@ const ServicesSection = () => {
 
   return (
     <section className="services">
-      <h2>Our Services Section</h2>
+      <h2>Our Services</h2>
       <div className="services-grid">
         {services.map((service, index) => (
           <ActionAreaCard
