@@ -19,8 +19,8 @@
   }
   
   .slide {
-    max-width: 100px; /* Adjust the width of each slide */
-    padding: 50px;
+    max-width: 120px; /* Adjust the width of each slide */
+    padding: 40px;
     transition: transform 0.5s ease;
   }
   
