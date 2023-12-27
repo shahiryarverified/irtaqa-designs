@@ -78,5 +78,9 @@
 .header-container-main
 {
   display: flex;
-  /* flex-direction: row; */
+}
+
+.myLogo {
+  min-width: 110%;
+  transform: translateX(-100px);
 }

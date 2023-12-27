@@ -2,12 +2,13 @@ import React from "react";
 import "./style.css";
 import NavBar from "../NavBar/NavBar";
 import {
-  FoundationOutlined,
   LocationOnOutlined,
   MessageOutlined,
   PhoneOutlined,
 } from "@mui/icons-material";
 import AboveHeader from "../AboveHeader/AboveHeader";
+import image from "../../assets/logo/1.png";
+
 const Header = () => {
   return (
     <div className="header-div">
@@ -16,7 +17,7 @@ const Header = () => {
         <div className="header-container-main">
           <div className="header-container-left">
             <div>
-              <FoundationOutlined id="header-container-left-icon" />
+              <img src={image} className="myLogo" alt="logo" />
             </div>
             <div className="header-container-left-background"></div>
           </div>

@@ -3,9 +3,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 50px;
-    background-color: #ffffff; /* Adjust the color to match your design */
+  }
+  
+  .story-inner
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 60%;
   }
   
   .story-content {
@@ -29,7 +37,7 @@
   }
   
   .story-image {
-    max-width: 45%;
+    max-width: 50%;
     padding-top: 50px;
     transform: translateY(-80px);
     transform: translateX(60px);
