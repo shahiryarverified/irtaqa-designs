@@ -28,7 +28,7 @@ const ActionAreaCard = ({ serviceName, context, img }) => {
           <Typography gutterBottom variant="h5" component="div">
             {serviceName}
           </Typography>
-          <Typography variant="body2" color="#fff">
+          <Typography variant="body1" color="text.primary">
             {context}
           </Typography>
         </CardContent>
