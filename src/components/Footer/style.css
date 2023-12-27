@@ -1,6 +1,7 @@
 .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #f8f8f8;
     font-family: 'Arial', sans-serif;
