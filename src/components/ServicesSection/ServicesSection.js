@@ -5,14 +5,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import service1 from "../../assets/service1.jpg";
-import service2 from "../../assets/service2.jpg";
-import service3 from "../../assets/service3.jpg";
-import service4 from "../../assets/service4.jpg";
-import service5 from "../../assets/service5.jpg";
-import service6 from "../../assets/service6.jpg";
-import service7 from "../../assets/service7.jpg";
-import service8 from "../../assets/service8.jpg";
+import service1 from "../../assets/serviceImages/service1.jpg";
+import service2 from "../../assets/serviceImages/service2.jpg";
+import service3 from "../../assets/serviceImages/service3.jpg";
+import service4 from "../../assets/serviceImages/service4.jpg";
+import service5 from "../../assets/serviceImages/service5.jpg";
+import service6 from "../../assets/serviceImages/service6.jpg";
+import service7 from "../../assets/serviceImages/service7.jpg";
+import service8 from "../../assets/serviceImages/service8.jpg";
 
 const ActionAreaCard = ({ serviceName, context, img }) => {
   return (

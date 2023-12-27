@@ -1,12 +1,14 @@
 // TeamSection.js
 import React from "react";
 import "./style.css";
-import image1 from "../../assets/image2.jpg";
-// import image2 from "../../assets/image2.jpg";
-// import image3 from "../../assets/image2.jpg";
-// import image4 from "../../assets/image2.jpg";
-// import image5 from "../../assets/image2.jpg";
-// import image6 from "../../assets/image2.jpg";
+import image1 from "../../assets/profileImages/John.jpeg";
+import image2 from "../../assets/profileImages/Jane.jpeg";
+import image3 from "../../assets/profileImages/Alex.jpeg";
+import image4 from "../../assets/profileImages/Emily.jpeg";
+import image5 from "../../assets/profileImages/Michael Lee.jpeg";
+import image6 from "../../assets/profileImages/Sophia.jpeg";
+import image7 from "../../assets/profileImages/William.jpeg";
+import image8 from "../../assets/profileImages/Olivia.jpeg";
 
 const TeamMemberProfile = ({ member }) => {
   return (
@@ -26,51 +28,51 @@ const TeamSection = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "John Doe",
-      position: "Construction Worker",
+      name: "Imran",
+      position: "Construction Director",
       image: image1,
     },
     {
       id: 2,
-      name: "Jane Smith",
+      name: "Ayesha",
       position: "Site Engineer",
-      image: image1,
+      image: image2,
     },
     {
       id: 3,
-      name: "Alex Johnson",
+      name: "Ali",
       position: "Architect",
-      image: image1,
+      image: image3,
     },
     {
       id: 4,
-      name: "Emily Brown",
+      name: "Emaan",
       position: "Project Manager",
-      image: image1,
+      image: image4,
     },
     {
       id: 5,
-      name: "Michael Lee",
+      name: "Musa",
       position: "Civil Engineer",
-      image: image1,
+      image: image5,
     },
     {
       id: 6,
-      name: "Sophia Garcia",
+      name: "Alina",
       position: "Foreman",
-      image: image1,
+      image: image6,
     },
     {
       id: 7,
-      name: "William Clark",
+      name: "Waleed",
       position: "Electrician",
-      image: image1,
+      image: image7,
     },
     {
       id: 8,
-      name: "Olivia Martinez",
-      position: "Plumber",
-      image: image1,
+      name: "Sara",
+      position: "Asisstant",
+      image: image8,
     },
   ];
 
