@@ -18,15 +18,47 @@
     padding: 10px 20px;
     margin: 0 10px;
     border: none;
-    background-color: #333;
+    background-color: #f00000;
     color: white;
     cursor: pointer;
   }
-  
-  .filter-buttons button:hover {
-    background-color: #555;
+  .filter-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(to right, #ff0000, #8B0000);
+    border-radius: 30px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
   
+  .filter-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .active {
+    /* Add more advanced and expressive styles for the active button */
+    background: linear-gradient(to right, #ff0000, #8B0000); /* Darker red background color for active state */
+    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1); /* Adjust box shadow for active state */
+    animation: glow 1s ease-in-out infinite alternate; /* Add a subtle glowing effect */
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px #e00202, 0 0 10px #e00202, 0 0 15px #e00202;
+    }
+    to {
+      box-shadow: 0 0 7px #e00202, 0 0 12px #e00202, 0 0 20px #e00202;
+    }
+  }
+
   .projects-grid {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +79,7 @@
   
   .project-image {
     width: 100%;
-    height: auto;
+    height: 200px;
     display: block;
   }
   
