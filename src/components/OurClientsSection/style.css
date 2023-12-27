@@ -15,13 +15,14 @@
   
   .slideshow-slider {
     display: flex;
-    animation: slide-animation 30s linear infinite;
+    animation: slide-animation 25s linear infinite;
   }
   
   .slide {
-    max-width: 120px; /* Adjust the width of each slide */
+    max-width:150px; /* Adjust the width of each slide */
+    max-height:150px; /* Adjust the width of each slide */
     padding: 40px;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
   }
   
   /* Keyframes for the sliding animation */
@@ -30,6 +31,6 @@
       transform: translateX(120%);
     }
     100% {
-      transform: translateX(-200%);
+      transform: translateX(-120%);
     }
   }
