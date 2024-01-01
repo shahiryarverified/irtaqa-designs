@@ -1,17 +1,50 @@
+/* For mobile devices */
+@media (max-width: 767px) {
+  .team-section .team-members {
+    grid-template-columns: 1fr !important; /* Change the grid layout for mobile */
+    gap: 5px;
+  }
+  .team-member {
+    width: 100%; /* Adjust width for mobile */
+  }
+  .profile-details h3 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    transform: translateY(-15px); /* Adjust position for mobile */
+  }
+  .profile-details p {
+    font-size: 0.75rem; /* Adjust font size for mobile */
+    transform: translateY(-33px); /* Adjust position for mobile */
+  }
+}
+
+/* For tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .team-section .team-members {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)) !important; /* Change the grid layout for tablet */
+    gap: 10px;
+  }
+  .team-member {
+    width: 45%; /* Adjust width for tablet */
+  }
+  .profile-details h3 {
+    font-size: 1.65rem; /* Adjust font size for tablet */
+    transform: translateY(-20px); /* Adjust position for tablet */
+  }
+  .profile-details p {
+    font-size: 0.8rem; /* Adjust font size for tablet */
+    transform: translateY(-43px); /* Adjust position for tablet */
+  }
+}
+
 .team-section {
     text-align: center;
     background-color: #fff; /* Adjust the color to match your design */
-    padding: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
     min-height: 900px;
   }
   
   .team-section h2 {
-    margin-bottom: 20px;
-    /* Add styles for the heading */
-  }
-
-  .team-section h2 {
-    margin-bottom: 50px;
     text-transform: uppercase;
     color: #333;
     position: relative;
@@ -30,21 +63,11 @@
 
   .team-members {
     display: grid;
-    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    max-width: 80%;
     gap: 2%;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-left: 10%;
-    margin-right: 10%; /* Adjust the gap as needed */
+    margin: 0 auto;
    }
-
-  .team-member {
-    width: 200px; /* Adjust width as needed */
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-  }
   
   .member-photo {
     width: 100%; /* Adjust to fit design */
@@ -66,7 +89,7 @@
     border: 1px solid #f00000;
     border-radius: 2%;
     max-height: 300px;
-    margin: 120px 6px 6px 6px;
+    margin: 6px;
     color: #fff;
     background-color: #8b0000;
     transition: transform 0.1s ease-in-out;
@@ -89,12 +112,6 @@
     position: relative;
   }
 
-  .profile-details p {
-    color: #fff;
-    transform: translateY(-56px) scale(1.05);
-    background-color: #8b0000;
-  }
-  
   .team-member-profile::after {
     content: '';
     position: absolute;
@@ -135,9 +152,9 @@
   }
   
   .profile-details p {
-    color: #666;
+    color: #fff;
     font-size: 0.85rem;
-    transform: translateY(-57px);
+    transform: translateY(-53px);
   }
   .profile-details h3,
   .profile-details p {

@@ -46,6 +46,7 @@
   
   .navbar a {
     text-decoration: none;
+    border-radius: 30px;
     font-size: 20px;
     color: #8B0000; /* Replace with the actual color */
     padding: 3px 16px; /* 3px top and bottom, 16px left and right */
