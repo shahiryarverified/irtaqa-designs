@@ -1,75 +1,103 @@
-  @media (max-width: 768px) {
-    .menu {
-      flex-direction: column;
-    }
-  }
+/* For mobile devices */
+@media (max-width:768px) {
+	.menu {
+		flex-direction: column;
+	}
 
-  @keyframes floating {
-    0% {
-      transform: translate(0, 0px);
-    }
-    50% {
-      transform: translate(0, -5px);
-    }
-    100% {
-      transform: translate(0, -0px);
-    }
-  }
-
-  .navbar{
+	.logo {
     display: flex;
-    border-top: 3px solid #8B0000;
-    border-bottom: 3px solid #8B0000;
-  }
+		flex: 100%;
+		align-items: center;
+		justify-content: center;
+		/* padding-left: 5%; */
+		font-weight: bolder;
+		font-size: 24px;
+		color: #8B0000;
+	}
 
-  .menu {
-    background-color: #fff;
-    color: #8B0000;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 3px;
-    z-index: 100;
-    flex: 40%;
-  }
+	.navbar a {
+		display: none;
+	}
 
-  .logo {
-    flex: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 8%;
-    font-weight: bolder;
-    font-size: 24px;
-    color: #8B0000;  
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 20px;
-    color: #8B0000; /* Replace with the actual color */
-    padding: 3px 16px; /* 3px top and bottom, 16px left and right */
-    background-color: #fff; /* Red background color */
-    transition: background-color 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  .navbar a:hover {
-    border-radius: 30px;
-    animation: floating 0.5s ease-in-out infinite;
-    color: #fff;
-    background-color: #F00000; /* Back to normal when not hovering */
-  }
-  
-#quoteButton {
-  background: linear-gradient(to right, #ff0000, #8B0000);;
-  color:#fff;
-  min-height: 100%;
-  padding: 8px 30px 0px 30px;
-  border-radius: 30px;
-  transform: translateY(20);
-  margin-right: 10px;
-  transition: .3s ease-in-out;
+	#quoteButton {
+		display: none;
+	}
+
 }
 
+/* For tablet devices */
+@media (max-width:1024px) {
 
+	/* Add your tablet-specific styles here */
+}
+
+@keyframes floating {
+	0% {
+		transform: translate(0, 0px);
+	}
+
+	50% {
+		transform: translate(0, -5px);
+	}
+
+	100% {
+		transform: translate(0, -0px);
+	}
+
+}
+
+.navbar {
+	display: flex;
+	border-top: 3px solid #8B0000;
+	border-bottom: 3px solid #8B0000;
+}
+
+.menu {
+	background-color: #fff;
+	color: #8B0000;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 3px;
+	z-index: 100;
+	flex: 40%;
+}
+
+.logo {
+	flex: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 5%;
+	font-weight: bolder;
+	font-size: 24px;
+	color: #8B0000;
+}
+
+.navbar a {
+	text-decoration: none;
+	border-radius: 30px;
+	font-size: 20px;
+	color: #8B0000;
+	padding: 3px 16px;
+	background-color: #fff;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+	border-radius: 30px;
+	animation: floating 0.5s ease-in-out infinite;
+	color: #fff;
+	background-color: #F00000;
+}
+
+#quoteButton {
+	background: linear-gradient(to right, #ff0000, #8B0000);
+	color: #fff;
+	min-height: 100%;
+	padding: 8px 30px 0px 30px;
+	border-radius: 30px;
+	transform: translateY(20);
+	margin-right: 10px;
+	transition: .3s ease-in-out;
+}

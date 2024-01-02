@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <span>IRTIQA DESIGNS</span>
+        <span>IRTAQA DESIGNS</span>
       </div>
       <div className="menu">
         <a href="#quote" id="quoteButton">

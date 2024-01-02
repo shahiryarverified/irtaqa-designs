@@ -81,6 +81,6 @@
 }
 
 .myLogo {
-  min-width: 110%;
-  transform: translateX(-100px);
+  min-width: 100%;
+  transform: translateX(-40px);
 }
