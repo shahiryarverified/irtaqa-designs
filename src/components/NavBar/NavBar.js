@@ -1,11 +1,14 @@
 import React from "react";
 import "./style.css";
+import image from "../../assets/logo/1.png";
 
 const NavBar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <span>IRTAQA DESIGNS</span>
+        <img
+        src={image} alt="logo"
+        />
       </div>
       <div className="menu">
         <a href="#quote" id="quoteButton">
