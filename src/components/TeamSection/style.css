@@ -3,17 +3,16 @@
   .team-section .team-members {
     grid-template-columns: 1fr !important; /* Change the grid layout for mobile */
     gap: 5px;
+    min-width: 100%;
   }
   .team-member {
     width: 100%; /* Adjust width for mobile */
   }
   .profile-details h3 {
     font-size: 1.5rem; /* Adjust font size for mobile */
-    transform: translateY(-15px); /* Adjust position for mobile */
   }
   .profile-details p {
     font-size: 0.75rem; /* Adjust font size for mobile */
-    transform: translateY(-33px); /* Adjust position for mobile */
   }
 }
 
@@ -22,17 +21,16 @@
   .team-section .team-members {
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)) !important; /* Change the grid layout for tablet */
     gap: 10px;
+    min-width: 100%;
   }
   .team-member {
     width: 45%; /* Adjust width for tablet */
   }
   .profile-details h3 {
     font-size: 1.65rem; /* Adjust font size for tablet */
-    transform: translateY(-20px); /* Adjust position for tablet */
   }
   .profile-details p {
     font-size: 0.8rem; /* Adjust font size for tablet */
-    transform: translateY(-43px); /* Adjust position for tablet */
   }
 }
 
@@ -98,18 +96,19 @@
   .team-member-profile:hover {
     color: #8b0000;
     background-color: #fff;
-    transform: translateY(-10px) scale(1.05);
+    transform: scale(1.05);
   }
   
   .team-member-profile:hover .profile-details p {
     color: #fff;
     background-color: #8b0000;
     border-radius: 5%;
-    transform: translateY(-56px) scale(1.05);
+    /* transform: translateY(-56px) scale(1.05); */
   }
 
   .team-member-profile {
     position: relative;
+    padding: 0px 20px 20px 20px;
   }
 
   .team-member-profile::after {
@@ -148,13 +147,13 @@
   
   .profile-details h3 {
     font-size: 1.75rem;
-    transform: translateY(-25px);
+    /* transform: translateY(-25px); */
   }
   
   .profile-details p {
     color: #fff;
     font-size: 0.85rem;
-    transform: translateY(-53px);
+    /* transform: translateY(-53px); */
   }
   .profile-details h3,
   .profile-details p {

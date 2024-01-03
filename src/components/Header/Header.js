@@ -1,18 +1,15 @@
 import React from "react";
 import "./style.css";
-import NavBar from "../NavBar/NavBar";
 import {
   LocationOnOutlined,
   MessageOutlined,
   PhoneOutlined,
 } from "@mui/icons-material";
-import AboveHeader from "../AboveHeader/AboveHeader";
 import image from "../../assets/logo/1.png";
 
 const Header = () => {
   return (
     <div className="header-div">
-      <AboveHeader />
       <header>
         <div className="header-container-main">
           <div className="header-container-left">
@@ -51,7 +48,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <NavBar />
       </header>
     </div>
   );

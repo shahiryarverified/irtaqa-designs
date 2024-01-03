@@ -9,11 +9,15 @@ import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import OurClientsSection from "./components/OurClientsSection/OurClientsSection";
 import ContactUsSection from "./components/ContactUsSection/ContactUsSection";
 import Footer from "./components/Footer/Footer";
+import NavBar from "./components/NavBar/NavBar";
+import AboveHeader from "./components/AboveHeader/AboveHeader";
 
 function App() {
   return (
-    <div>
+    <div className="App">
+      <AboveHeader />
       <Header />
+      <NavBar />
       <HeroSection name="hero" />
       <StorySection name="story" />
       <Services name="services" />
