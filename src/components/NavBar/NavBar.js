@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import image from "../../assets/logo/1.png";
 
 const NavBar = () => {
+  const [onServices, setOnServices] = useState(false);
+  const services = [
+    { title: "Building Structures" },
+    { title: "Urban Development" },
+    { title: "Water Supply & Sanitation" },
+    { title: "Geo Technical" },
+    { title: "Environmental" },
+    { title: "Planning & Management" },
+    { title: "Quantity & Estimation" },
+    { title: "Surveying" },
+  ];
   return (
     <div className="navbar">
       <div className="logo">
-        <img
-        src={image} alt="logo"
-        />
+        <img src={image} alt="logo" />
       </div>
       <div className="menu">
         <a href="#quote" id="quoteButton">
@@ -29,20 +38,40 @@ const NavBar = () => {
         >
           About
         </a>
-        <a
-          href="#services"
-          onClick={() => {
-            const targetDiv = document.querySelector(".services"); // Replace "yourDivName" with the actual name of your div
-            if (targetDiv) {
-              window.scrollTo({
-                top: targetDiv.offsetTop,
-                behavior: "smooth",
-              });
-            }
-          }}
+        <div
+          className="navbar-with-submenu"
+          onMouseEnter={() => setOnServices(true)}
+          onMouseLeave={() => setOnServices(false)}
         >
-          Services
-        </a>
+          <div>
+            <a
+              href="#services"
+              onClick={() => {
+                const targetDiv = document.querySelector(".services");
+                if (targetDiv) {
+                  window.scrollTo({
+                    top: targetDiv.offsetTop,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Services
+            </a>
+            {onServices && (
+              <div className="services-menu">
+                {services.map((service, index) => (
+                  <a
+                    key={index}
+                    href={`#${service.title.replace(/ /g, "").toLowerCase()}`}
+                  >
+                    {service.title}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
         <a
           href="#projects"
           onClick={() => {

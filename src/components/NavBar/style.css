@@ -46,9 +46,14 @@
 }
 
 .navbar {
+	position: sticky;
+	top: 0%;
+	z-index: 40;
 	display: flex;
+	background-color: white;
 	border-top: 3px solid #8B0000;
 	border-bottom: 3px solid #8B0000;
+	box-shadow: 0 20px 20px rgba(100,0,0,0.5);
 }
 
 .menu {
@@ -80,7 +85,7 @@
 	border-radius: 30px;
 	font-size: 20px;
 	color: #8B0000;
-	padding: 3px 16px;
+	padding: 13px 26px;
 	background-color: #fff;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -101,3 +106,40 @@
 	margin-right: 10px;
 	transition: .3s ease-in-out;
 }
+
+.services-menu{
+	display: none;
+ 	position: absolute;
+ 	background-color: #f9f9f9;
+  	min-width: 160px;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+	width: 400px;
+	height: 385px;
+	border-radius: 5px;
+	border: 1px solid #8B0000;
+	background-color: white;
+	z-index: 30;
+	top: 150%;
+	left: 0%;
+}
+
+.navbar-with-submenu{
+	position: relative;
+	height: 100%;
+}
+
+.services-menu a {
+	color: black;
+	padding: 6px 12px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .services-menu a:hover {
+	background-color: #8B0000;
+  }
+  
+  .navbar-with-submenu:hover .services-menu {
+	display: block;
+  }
