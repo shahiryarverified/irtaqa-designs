@@ -69,14 +69,12 @@
 	position: sticky;
 	width: 100%;
 	top: 0;
-	right: 0;
-	left: 0;
 	z-index: 40;
 	display: flex;
 	background-color: white;
 	border-top: 3px solid #8B0000;
 	border-bottom: 3px solid #8B0000;
-	box-shadow: 0 20px 20px rgba(100,0,0,0.5);
+	box-shadow: 0 5px 10px rgba(255,0,0,0.5);
 }
 
 .menu {
