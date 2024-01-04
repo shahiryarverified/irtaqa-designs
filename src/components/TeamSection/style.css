@@ -3,10 +3,7 @@
   .team-section .team-members {
     grid-template-columns: 1fr;
     gap: 5px;
-    max-width: 90%;
-  }
-  .team-member {
-    width: 100%;
+    width: 70%;
   }
   .profile-details h3 {
     font-size: 1.5rem;
@@ -21,10 +18,7 @@
   .team-section .team-members {
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
     padding-top: 100px;
-    /* min-width: 100%; */
-  }
-  .team-member {
-    max-width: 40%;
+    width: 75%;
   }
   .profile-details h3 {
     font-size: 1.65rem;
@@ -61,7 +55,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 2%;
-    width: 55%;
+    width: 80%;
     padding-top: 100px;
     padding-bottom: 100px;
     margin: auto;
@@ -79,7 +73,7 @@
     justify-items: center;
     /* max-width: 70%; */
     border: 1px solid #f00000;
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 10% 10% 20% 20%;
     color: #fff;
     background-color: #8b0000;
     transition: transform 0.1s ease-in-out;
@@ -88,7 +82,7 @@
   .team-member-profile:hover {
     color: #8b0000;
     background-color: #fff;
-    transform: scale(1.05);
+    transform: scale(0.95);
   }
   
   .team-member-profile:hover .profile-details p {
@@ -126,7 +120,7 @@
   .profile-image img {
     display: flex;
     width: 100%;
-    border-radius: 50%;
+    border-radius: 5%;
     object-fit: cover;
   }
   

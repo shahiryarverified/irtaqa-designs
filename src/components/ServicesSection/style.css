@@ -56,6 +56,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
     margin: auto;
+    width: 80%;
     gap: 2%;
   }
   
@@ -64,6 +65,7 @@
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
     justify-content: center;
+    width: 80%;
     padding-top: 100px;
     padding-bottom: 100px;
   }
