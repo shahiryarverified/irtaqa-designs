@@ -27,7 +27,27 @@
 /* For tablet devices */
 @media (max-width:1024px) {
 
-	/* Add your tablet-specific styles here */
+	.menu {
+		flex-direction: column;
+	}
+
+	.logo {
+    display: flex;
+		flex: 100%;
+		align-items: center;
+		justify-content: center;
+		font-weight: bolder;
+		font-size: 24px;
+		color: #8B0000;
+	}
+
+	.navbar a {
+		display: none;
+	}
+
+	#quoteButton {
+		display: none;
+	}
 }
 
 @keyframes floating {
@@ -47,7 +67,10 @@
 
 .navbar {
 	position: sticky;
-	top: 0%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
 	z-index: 40;
 	display: flex;
 	background-color: white;

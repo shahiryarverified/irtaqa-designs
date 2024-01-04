@@ -1,20 +1,31 @@
+@media(max-width:768px){
+  .contact-us-section-inner{
+    flex-direction: column;
+    padding: 10px;
+  }
+  .contact-info{
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
 .contact-us-section-inner {
     background-color: #D32F2F; /* Adjust the color to match the exact shade */
     color: white;
     border-radius: 2%;
-    min-height: 600px;
+    min-height: 80%;
     display: flex;
-    justify-content: flex-start;
+    padding: 40px;
+    justify-content: center;
     align-items: center;
-    max-width: 50%;
   }
   
   .contact-us-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 80px 40px 80px 40px;
   }
 
   .contact-us-section-inner h2 {
@@ -25,27 +36,46 @@
   .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 50px;
-    justify-content: flex-start;
   }
   
+  .contact-info p {
+    margin: 5px;
+  }
+
   .contact-info h3 {
     font-size: 20px; /* Adjust the size as needed */
   }
   
   
   .social-icons {
-    /* Style for social icons */
+    display: flex;
+    padding: 20px;
   }
   
   .contact-form {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 20px;
-    max-width: 500px;
-    min-height: 500px;
-    margin: 50px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px; /* Adjust as needed */
+  }
+
+  .contact-form-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust as needed */
+  }
+  
+  .contact-form-outer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
   }
   
   .contact-form input,
@@ -53,7 +83,7 @@
     width: 90%;
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ccc; /* Adjust color as needed */
+    border: 1px solid #8B0000; /* Adjust color as needed */
     border-radius: 5px; /* Adjust as needed */
   }
   
@@ -65,7 +95,7 @@
     background-color: #D32F2F; /* Adjust the color to match the exact shade */
     color: white;
     border: none;
-    min-width: 100%;
+    min-width: 90%;
     padding: 10px 20px;
     text-transform: uppercase;
     cursor: pointer;
