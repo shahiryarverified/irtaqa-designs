@@ -10,7 +10,7 @@ const StorySection = () => {
     // JSX for the "Our Story" section
     <section className="story">
       <div className="story-inner">
-        <div>
+        <div className="story-buttons">
           <button
             className={
               "story-button " + (activeSection === "aboutUs" ? "active" : "")

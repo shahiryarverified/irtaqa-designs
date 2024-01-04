@@ -75,7 +75,10 @@
     box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1);
   }
   
-  
+  .story-buttons {
+    display: flex;
+  }
+
   .active {
     /* Add more advanced and expressive styles for the active button */
     background: linear-gradient(to right, #ff0000, #8B0000); /* Darker red background color for active state */

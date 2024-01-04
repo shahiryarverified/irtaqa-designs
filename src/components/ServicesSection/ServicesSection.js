@@ -17,14 +17,14 @@ import service8 from "../../assets/serviceImages/service8.jpg";
 const ActionAreaCard = ({ serviceName, context, img }) => {
   return (
     <Card className="ActionAreaCard">
-      <CardActionArea>
+      <CardActionArea style={{ height: "100%" }}>
         <CardMedia
           component="img"
           height="140"
           image={img}
           alt="green iguana"
         />
-        <CardContent>
+        <CardContent style={{ height: "40vh" }}>
           <Typography gutterBottom variant="h5" component="div">
             {serviceName}
           </Typography>
