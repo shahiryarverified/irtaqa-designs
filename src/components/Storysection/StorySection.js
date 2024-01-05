@@ -37,6 +37,12 @@ const StorySection = () => {
           </button>
         </div>
         <div className="story-content-and-image">
+          <div className="story-image">
+            <img
+              src={activeSection !== "ceoMessage" ? image : image2}
+              alt="Our Story"
+            />
+          </div>
           {activeSection === "ceoMessage" && (
             <div className="story-content">
               <h2>CEO Message</h2>
@@ -120,12 +126,6 @@ const StorySection = () => {
               </p>
             </div>
           )}
-          <div className="story-image">
-            <img
-              src={activeSection !== "ceoMessage" ? image : image2}
-              alt="Our Story"
-            />
-          </div>
         </div>
       </div>
     </section>

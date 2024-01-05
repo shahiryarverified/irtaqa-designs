@@ -1,9 +1,44 @@
+
+@media (max-width:768px) {
+  .story-buttons{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .story-button{
+    margin: 5px;
+    width: 170px;
+  }
+
+  .story-content-and-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-image {
+    padding: 20px;
+  }
+
+  .story-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .story-inner{
+    min-width: 90%;
+  }
+}
+
+
+
 /* CSS for the "Our Story" section */
 .story {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 50px;
   }
   
@@ -12,12 +47,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    max-width: 60%;
+    max-width: 80%;
   }
   
   .story-content {
-    max-width: 50%;
+    padding: 20px;
   }
   
   .story-content h2 {
@@ -31,27 +65,18 @@
     color: #333; /* Adjust the color to match your design */
   }
   
-  .story-content h3 {
-    font-size: 1.5em;
-    margin-top: 40px;
-  }
-  
-  .story-image {
-    max-width: 50%;
-    padding-top: 50px;
-    transform: translateY(-80px);
-    transform: translateX(60px);
-  }
-  
-  .story-image img {
-    width: 100%;
-    height: auto;
-  }
-
   .story-content-and-image
   {
     display: flex;
-    flex-direction: row;
+  }
+
+  .story-image {
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .story-image img {
+    max-height: 400px;
   }
   
   .story-button {
@@ -82,15 +107,15 @@
   .active {
     /* Add more advanced and expressive styles for the active button */
     background: linear-gradient(to right, #ff0000, #8B0000); /* Darker red background color for active state */
-    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1); /* Adjust box shadow for active state */
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Adjust box shadow for active state */
     animation: glow 1s ease-in-out infinite alternate; /* Add a subtle glowing effect */
   }
   
   @keyframes glow {
     from {
-      box-shadow: 0 0 5px #e00202, 0 0 10px #e00202, 0 0 15px #e00202;
+      box-shadow: 0 0 2.5px #e00202, 0 0 5px #e00202, 0 0 7.5px #e00202;
     }
     to {
-      box-shadow: 0 0 7px #e00202, 0 0 12px #e00202, 0 0 20px #e00202;
+      box-shadow: 0 0 3.5px #e00202, 0 0 6px #e00202, 0 0 10px #e00202;
     }
   }
