@@ -1,17 +1,26 @@
-/* For mobile devices */
-@media (max-width:768px) {
-	.menu {
-		flex-direction: column;
-	}
+.hamburger {
+	display: none;
+	width: 50px;
+	font-size: 34px;
+	background-color: white;
+	border: 0px;
+	color: #8B0000;
+  }
+  
 
+/* For mobile devices */
+@media (max-width:1100px) {
 	.logo {
-    display: flex;
-		flex: 100%;
-		align-items: center;
-		justify-content: center;
+    	display: flex;
 		font-weight: bolder;
 		font-size: 24px;
 		color: #8B0000;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.navbar a {
@@ -22,32 +31,26 @@
 		display: none;
 	}
 
+	.hamburger {
+		display: block;
+		margin-right: 20px;
+	}
+
+	.menu {
+		display: none;
+	}
+	
+	.menu.open {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
-/* For tablet devices */
-@media (max-width:1024px) {
-
-	.menu {
-		flex-direction: column;
-	}
-
-	.logo {
-    display: flex;
-		flex: 100%;
-		align-items: center;
-		justify-content: center;
-		font-weight: bolder;
-		font-size: 24px;
-		color: #8B0000;
-	}
-
-	.navbar a {
-		display: none;
-	}
-
-	#quoteButton {
-		display: none;
-	}
+.hamburger:hover {
+	background-color: #8B0000;
+	color: white;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
 }
 
 @keyframes floating {

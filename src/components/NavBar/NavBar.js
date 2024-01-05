@@ -4,6 +4,8 @@ import image from "../../assets/logo/1.png";
 
 const NavBar = () => {
   const [onServices, setOnServices] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   const services = [
     { title: "Building Structures" },
     { title: "Urban Development" },
@@ -19,7 +21,7 @@ const NavBar = () => {
       <div className="logo">
         <img src={image} alt="logo" />
       </div>
-      <div className="menu">
+      <div className={isOpen ? "menu open" : "menu"}>
         <a href="#quote" id="quoteButton">
           Quote
         </a>
@@ -115,6 +117,9 @@ const NavBar = () => {
           Contact
         </a>
       </div>
+      <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <span>&#9776;</span>
+      </button>
     </div>
   );
 };
