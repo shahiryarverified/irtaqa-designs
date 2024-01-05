@@ -7,7 +7,7 @@ function ContactUsSection() {
     <div className="contact-us-section">
       <div className="contact-us-section-inner">
         <div className="contact-info">
-          <h2>Contact US</h2>
+          <h2>CONTACT US</h2>
           <p className="phone-number">+92-3009596802</p>
           <p className="email">contact@irtaqadesigns</p>
           <p className="address">DHA4,Lahore,Pakistan</p>

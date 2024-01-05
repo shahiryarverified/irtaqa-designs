@@ -11,17 +11,12 @@
   }
 
   .ActionAreaCard {
-    width: 100%;
-    height: 100%;
+    width: 300px;
     color: #fff;
     background-color: #ff0000;
     animation: pulseAnimation 2s infinite;
   }
   
-  .CardContent {
-    height: 27vh;
-  }
-
   .ActionAreaCard:hover {
     box-shadow: 0 10px 20px #ff0000;
   }
@@ -29,9 +24,11 @@
   .services {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-self: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
   
@@ -54,36 +51,11 @@
   }
   
   .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
-    margin: auto;
-    width: 60%;
-    gap: 2%;
-  }
-  
-  /* For tablets */
-@media (max-width: 1023px) {
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-    justify-content: center;
-    width: 80%;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .CardContent{
-    height: 18vh;
-  }
-}
-
-/* For mobile */
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70%;
+    margin-top: 70px;
   }
-  .CardContent{
-    height: 40vh;
-  }
-}
