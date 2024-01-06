@@ -16,128 +16,81 @@ const NavBar = () => {
     { title: "Quantity & Estimation" },
     { title: "Surveying" },
   ];
+
+  const navLinks = [
+    { name: "Home", anchor: "hero-section", offset: -1100 },
+    { name: "About", anchor: "story-content", offset: isOpen ? -1100 : -200 },
+    {
+      name: "Projects",
+      anchor: "projects-section",
+      offset: isOpen ? -400 : 0,
+    },
+    { name: "Team", anchor: "team-section", offset: isOpen ? -400 : 0 },
+    { name: "Contact", anchor: "contact-us-section", offset: 0 },
+  ];
+
+  const scrollToSection = (anchor, offset) => {
+    const targetDiv = document.querySelector(`.${anchor}`);
+    if (targetDiv) {
+      window.scrollTo({
+        top: targetDiv.offsetTop + offset,
+        behavior: "smooth",
+      });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <div className="navbar">
-      <div className="logo">
-        <img src={image} alt="logo" />
+      <div className="logo-hamburger">
+        <div className="logo">
+          <img src={image} alt="logo" />
+        </div>
+        <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+          {!isOpen ? <span>&#9776;</span> : <span>&times;</span>}
+        </button>
       </div>
       <div className={isOpen ? "menu open" : "menu"}>
         <a href="#quote" id="quoteButton">
           Quote
-        </a>
-        <a
-          href="#home"
-          onClick={() => {
-            const targetDiv = document.querySelector(".hero-section"); // Replace "yourDivName" with the actual name of your div
-            if (targetDiv) {
-              window.scrollTo({
-                top: targetDiv.offsetTop - 1100,
-                behavior: "smooth",
-              });
-              setIsOpen(false);
-            }
-          }}
-        >
-          Home
-        </a>
-        <a
-          href="#story"
-          onClick={() => {
-            const targetDiv = document.querySelector(".story-content"); // Replace "yourDivName" with the actual name of your div
-            if (targetDiv) {
-              window.scrollTo({
-                top: targetDiv.offsetTop - 1100,
-                behavior: "smooth",
-              });
-              setIsOpen(false);
-            }
-          }}
-        >
-          About
         </a>
         <div
           className="navbar-with-submenu"
           onMouseEnter={() => setOnServices(true)}
           onMouseLeave={() => setOnServices(false)}
         >
-          <div>
-            <a
-              href="#services"
-              onClick={() => {
-                const targetDiv = document.querySelector(".services"); // Replace "yourDivName" with the actual name of your div
-                if (targetDiv) {
-                  window.scrollTo({
-                    top: targetDiv.offsetTop - 600,
-                    behavior: "smooth",
-                  });
-                }
-              }}
+          <a
+            href="#services"
+            onClick={() => scrollToSection("services", isOpen ? -400 : 0)}
+          >
+            Services
+          </a>
+          {onServices && (
+            <div
+              className="services-menu"
+              style={{ height: `${services.length * 50 + 50}px` }} // Set the height dynamically with additional padding
             >
-              Services
-            </a>
-            {onServices && (
-              <div className="services-menu">
-                {services.map((service, index) => (
-                  <a
-                    key={index}
-                    href={`#${service.title.replace(/ /g, "").toLowerCase()}`}
-                  >
-                    {service.title}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
+              {services.map((service, index) => (
+                <a
+                  key={index}
+                  href={`#${service.title.replace(/ /g, "").toLowerCase()}`}
+                >
+                  {service.title}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
-        <a
-          href="#projects"
-          onClick={() => {
-            const targetDiv = document.querySelector(".projects-section"); // Replace "yourDivName" with the actual name of your div
-            if (targetDiv) {
-              window.scrollTo({
-                top: targetDiv.offsetTop - 400,
-                behavior: "smooth",
-              });
-              setIsOpen(false);
-            }
-          }}
-        >
-          Projects
-        </a>
-        <a
-          href="#team"
-          onClick={() => {
-            const targetDiv = document.querySelector(".team-section"); // Replace "yourDivName" with the actual name of your div
-            if (targetDiv) {
-              window.scrollTo({
-                top: targetDiv.offsetTop - 400,
-                behavior: "smooth",
-              });
-              setIsOpen(false);
-            }
-          }}
-        >
-          Team
-        </a>
-        <a
-          href="#contact"
-          onClick={() => {
-            const targetDiv = document.querySelector(".contact-us-section"); // Replace "yourDivName" with the actual name of your div
-            if (targetDiv) {
-              window.scrollTo({
-                top: targetDiv.offsetTop,
-                behavior: "smooth",
-              });
-              setIsOpen(false);
-            }
-          }}
-        >
-          Contact
-        </a>
+        {navLinks.map((link, index) => (
+          <a
+            key={index}
+            href={`#${link.anchor}`}
+            onClick={() => scrollToSection(link.anchor, link.offset)}
+          >
+            {link.name}
+          </a>
+        ))}
       </div>
-      <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        {!isOpen ? <span>&#9776;</span> : <span>&times;</span>}
-      </button>
     </div>
   );
 };
