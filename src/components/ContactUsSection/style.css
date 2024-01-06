@@ -36,7 +36,7 @@
 
 
 .contact-us-section-inner {
-    background-color: #D32F2F; /* Adjust the color to match the exact shade */
+    background: linear-gradient(to right,#20356E, #8B0000); /* Adjust the color to match the exact shade */
     color: white;
     border-radius: 1% 1%;
     display: flex;
@@ -122,7 +122,7 @@
   }
 
   .contact-form button {
-    background-color: #D32F2F; /* Adjust the color to match the exact shade */
+    background: linear-gradient(to right,#20356E, #8B0000); /* Adjust the color to match the exact shade */
     color: white;
     border: none;
     width: 90%;
