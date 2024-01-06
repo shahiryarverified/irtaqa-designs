@@ -13,12 +13,12 @@ import image8 from "../../assets/profileImages/Olivia.jpeg";
 const TeamMemberProfile = ({ member }) => {
   return (
     <div className="team-member-profile">
-      <div className="profile-image">
-        <img src={member.image} alt={member.name} />
-      </div>
       <div className="profile-details">
         <h3>{member.name}</h3>
         <p>{member.position}</p>
+      </div>
+      <div className="profile-image">
+        <img src={member.image} alt={member.name} />
       </div>
     </div>
   );

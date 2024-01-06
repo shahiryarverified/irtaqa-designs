@@ -89,6 +89,44 @@ const StorySection = () => {
                 been building life time relationships with our clients through
                 our services under supervisions of professionals.
               </p>
+              <div className="expertise-progress-bars">
+                <div className="progress-bar-container">
+                  <div className="title-container">
+                    <label>INFRASTRUCTURE</label>
+                    <span>95%</span>
+                  </div>
+                  <div className="progress-bar">
+                    <div className="progress" style={{ width: "95%" }}></div>
+                  </div>
+                </div>
+                <div className="progress-bar-container">
+                  <div className="title-container">
+                    <label>COMMERCIAL</label>
+                    <span>90%</span>
+                  </div>
+                  <div className="progress-bar">
+                    <div className="progress" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <div className="progress-bar-container">
+                  <div className="title-container">
+                    <label>HIGH RISE BUILDINGS</label>
+                    <span>90%</span>
+                  </div>
+                  <div className="progress-bar">
+                    <div className="progress" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <div className="progress-bar-container">
+                  <div className="title-container">
+                    <label>RESIDENTIAL</label>
+                    <span>90%</span>
+                  </div>
+                  <div className="progress-bar">
+                    <div className="progress" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
           {activeSection === "aboutUs" && (

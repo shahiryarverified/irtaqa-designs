@@ -34,7 +34,7 @@
     justify-content: center;
 }
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     #main {
         flex-direction: column;
     }
@@ -44,8 +44,5 @@
     }
     #icon {
         font-size: 30px;
-    }
-    #text {
-        
     }
 }

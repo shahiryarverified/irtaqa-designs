@@ -25,7 +25,7 @@ const NavBar = () => {
       anchor: "projects-section",
       offset: isOpen ? -400 : 0,
     },
-    { name: "Team", anchor: "team-section", offset: isOpen ? -400 : 0 },
+    { name: "Team", anchor: "team-section", offset: isOpen ? -400 : -100 },
     { name: "Contact", anchor: "contact-us-section", offset: 0 },
   ];
 
@@ -68,7 +68,7 @@ const NavBar = () => {
           {onServices && (
             <div
               className="services-menu"
-              style={{ height: `${services.length * 50 + 50}px` }} // Set the height dynamically with additional padding
+              style={{ height: `${services.length * 50 + 60}px` }} // Set the height dynamically with additional padding
             >
               {services.map((service, index) => (
                 <a

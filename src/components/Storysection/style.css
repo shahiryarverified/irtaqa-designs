@@ -18,13 +18,9 @@
     justify-content: center;
   }
 
-  .story-image {
-    padding: 20px;
-  }
-
   .story-image img {
-    width: 300px;
-    height: 300px;
+    width: 375px;
+    height: 375px;
   }
 
   .story-inner{
@@ -40,7 +36,8 @@
     background-color: #EDF2F7;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   
   .story-inner
@@ -53,7 +50,6 @@
   
   .story-content {
     padding: 20px;
-    margin-top: 60px;
   }
   
   .story-content h2 {
@@ -64,6 +60,7 @@
   .story-content p {
     font-size: 1em;
     line-height: 1.6;
+    text-align: justify;
     color: #333; /* Adjust the color to match your design */
   }
   
@@ -74,7 +71,6 @@
 
   .story-image {
     padding: 20px;
-    margin-top: 60px;
   }
 
   .story-image img {
@@ -91,7 +87,8 @@
     text-decoration: none;
     border: none;
     color: #ffffff;
-    background: linear-gradient(to right, #ff0000, #8B0000);
+    background: linear-gradient(to right, #0000ff,#20356E);
+    border: 2px solid #8B0000;
     border-radius: 30px;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -107,7 +104,6 @@
   }
 
   .active {
-    /* Add more advanced and expressive styles for the active button */
     background: linear-gradient(to right, #ff0000, #8B0000); /* Darker red background color for active state */
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Adjust box shadow for active state */
     animation: glow 1s ease-in-out infinite alternate; /* Add a subtle glowing effect */
@@ -120,4 +116,49 @@
     to {
       box-shadow: 0 0 3.5px #e00202, 0 0 6px #e00202, 0 0 10px #e00202;
     }
+  }
+
+  .expertise-progress-bars .progress-bar-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .expertise-progress-bars .progress-bar-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .expertise-progress-bars .progress-bar {
+    background-color: #ccc;
+    width: 70%;
+    border-radius: 5px;
+    position: relative;
+    height: 20px;
+  }
+  
+  .expertise-progress-bars .progress-bar .progress {
+    background-color: #d9534f;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .expertise-progress-bars .progress-bar-container .progress-percentage {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .title-container {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
   }
