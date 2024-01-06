@@ -36,7 +36,7 @@
     background-color: #EDF2F7;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
   }
   
@@ -101,6 +101,7 @@
   
   .story-buttons {
     display: flex;
+    padding-bottom: 20px;
   }
 
   .active {

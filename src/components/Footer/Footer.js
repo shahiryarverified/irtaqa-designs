@@ -32,7 +32,7 @@ const Footer = () => {
             <a
               href="#home"
               onClick={() => {
-                const targetDiv = document.querySelector(".hero-section"); // Replace "yourDivName" with the actual name of your div
+                const targetDiv = document.querySelector("#main"); // Replace "yourDivName" with the actual name of your div
                 if (targetDiv) {
                   window.scrollTo({
                     top: targetDiv.offsetTop,

@@ -1,23 +1,26 @@
-/* Thin scrollbar */
+/* Thin and rounded scrollbar */
 ::-webkit-scrollbar {
-    width: 0px;
-  }
-  
-  /* Transparent background */
+  width: 8px; /* Set the width of the scrollbar */
+  border-radius: 10px; /* Set the border radius to make it rounded */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8b0000; /* Set the handle background color */
+  border: 2px solid #fefefe; /* Add a border to the handle */
+  border-radius: 10px; /* Set the border radius to make it rounded */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #20356E; /* Change the handle color on hover */
+}
+
+@media (max-width: 1100px) {
   ::-webkit-scrollbar {
-    background-color: transparent;
+    display: none; /* Hide the scrollbar */
   }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: transparent; /* Set the handle background to transparent */
-    border: none; /* Remove the border */
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Change the handle color on hover */
-  }
+}
 
   .App {
     background-color: #fefefe;
