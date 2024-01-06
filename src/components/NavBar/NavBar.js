@@ -61,7 +61,7 @@ const NavBar = () => {
         >
           <a
             href="#services"
-            onClick={() => scrollToSection("services", isOpen ? -400 : 0)}
+            onClick={() => scrollToSection("services", isOpen ? -400 : -100)}
           >
             Services
           </a>

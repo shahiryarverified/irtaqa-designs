@@ -1,16 +1,5 @@
 
 @media (max-width:1100px) {
-  .story-buttons{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .story-button{
-    margin: 5px;
-    width: 170px;
-  }
-
   .story-content-and-image{
     display: flex;
     flex-direction: column;
@@ -19,13 +8,10 @@
   }
 
   .story-image img {
-    width: 375px;
-    height: 375px;
+    width: 400px;
+    height: 400px;
   }
 
-  .story-inner{
-    min-width: 90%;
-  }
 }
 
 
@@ -35,6 +21,8 @@
     display: flex;
     background-color: #EDF2F7;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 100px;
@@ -54,6 +42,7 @@
   
   .story-content h2 {
     font-size: 2em;
+    text-align: left;
     margin-bottom: 20px;
   }
   
@@ -77,6 +66,22 @@
     max-height: 400px;
   }
   
+  
+  .story-buttons {
+    margin-bottom: 20px;
+    /* display: flex; */
+  }
+
+  .story-buttons button {
+    padding: 10px 20px;
+    width: 175px;
+    margin: 5px 5px;
+    border: 2px solid #8b0000;
+    background-color: #f00000;
+    color: white;
+    cursor: pointer;
+  }
+
   .story-button {
     display: inline-block;
     padding: 10px 20px;
@@ -85,7 +90,6 @@
     font-size: 1.2em;
     text-align: center;
     text-decoration: none;
-    border: none;
     color: #ffffff;
     background: linear-gradient(to right, #0000ff,#20356E);
     border: 2px solid #8B0000;
@@ -97,11 +101,6 @@
   .story-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .story-buttons {
-    display: flex;
-    padding-bottom: 20px;
   }
 
   .active {
@@ -159,7 +158,7 @@
   .title-container {
     display: flex;
     width: 70%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
