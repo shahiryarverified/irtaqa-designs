@@ -25,16 +25,31 @@ const NavBar = () => {
         <a href="#quote" id="quoteButton">
           Quote
         </a>
-        <a href="#home">Home</a>
+        <a
+          href="#home"
+          onClick={() => {
+            const targetDiv = document.querySelector(".hero-section"); // Replace "yourDivName" with the actual name of your div
+            if (targetDiv) {
+              window.scrollTo({
+                top: targetDiv.offsetTop - 1100,
+                behavior: "smooth",
+              });
+              setIsOpen(false);
+            }
+          }}
+        >
+          Home
+        </a>
         <a
           href="#story"
           onClick={() => {
             const targetDiv = document.querySelector(".story-content"); // Replace "yourDivName" with the actual name of your div
             if (targetDiv) {
               window.scrollTo({
-                top: targetDiv.offsetTop,
+                top: targetDiv.offsetTop - 1100,
                 behavior: "smooth",
               });
+              setIsOpen(false);
             }
           }}
         >
@@ -49,10 +64,10 @@ const NavBar = () => {
             <a
               href="#services"
               onClick={() => {
-                const targetDiv = document.querySelector(".services");
+                const targetDiv = document.querySelector(".services"); // Replace "yourDivName" with the actual name of your div
                 if (targetDiv) {
                   window.scrollTo({
-                    top: targetDiv.offsetTop,
+                    top: targetDiv.offsetTop - 600,
                     behavior: "smooth",
                   });
                 }
@@ -80,9 +95,10 @@ const NavBar = () => {
             const targetDiv = document.querySelector(".projects-section"); // Replace "yourDivName" with the actual name of your div
             if (targetDiv) {
               window.scrollTo({
-                top: targetDiv.offsetTop,
+                top: targetDiv.offsetTop - 400,
                 behavior: "smooth",
               });
+              setIsOpen(false);
             }
           }}
         >
@@ -94,9 +110,10 @@ const NavBar = () => {
             const targetDiv = document.querySelector(".team-section"); // Replace "yourDivName" with the actual name of your div
             if (targetDiv) {
               window.scrollTo({
-                top: targetDiv.offsetTop,
+                top: targetDiv.offsetTop - 400,
                 behavior: "smooth",
               });
+              setIsOpen(false);
             }
           }}
         >
@@ -111,6 +128,7 @@ const NavBar = () => {
                 top: targetDiv.offsetTop,
                 behavior: "smooth",
               });
+              setIsOpen(false);
             }
           }}
         >
@@ -118,7 +136,7 @@ const NavBar = () => {
         </a>
       </div>
       <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <span>&#9776;</span>
+        {!isOpen ? <span>&#9776;</span> : <span>&times;</span>}
       </button>
     </div>
   );
