@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import image from "../../assets/logo/1.png";
+import { ArrowDropDown } from "@mui/icons-material";
 
 const NavBar = () => {
   const [onServices, setOnServices] = useState(false);
@@ -62,7 +63,13 @@ const NavBar = () => {
           onMouseEnter={() => setOnServices(true)}
           onMouseLeave={() => setOnServices(false)}
         >
-          <Link to="/services">Services</Link>
+          <div
+            className="link-with-icon"
+            onClick={() => setOnServices(!onServices)}
+          >
+            <Link to="/services">Services</Link>
+            <ArrowDropDown className="service-arrow" />
+          </div>
           {onServices && (
             <div
               className="services-menu"

@@ -1,0 +1,72 @@
+.project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60%; /* Adjust as needed */
+    overflow: hidden; /* Ensure the images are clipped */
+    position: relative; /* Needed for absolute positioning of images */
+  }
+  
+.slideshow p,h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+  .back-button {
+    color: #fff;
+	background: linear-gradient(to left,#20356E, #8B0000);
+    padding: 20px;
+    margin: 2%;
+    cursor: pointer;
+  }
+
+  
+  .container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container button {
+    background: linear-gradient(to left,#20356E, #8B0000);
+    border-radius: 50px;
+    color: white;
+    padding: 15px ;
+    text-align: center;
+    font-size: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+
+  .container button:hover, .back-button:hover {
+	color: #fff;
+	background: linear-gradient(to right,#20356E, #8B0000);
+  }
+  
+  .container button:first-of-type {
+    order: 1;
+  }
+  
+  .container img {
+    order: 2;
+    min-width: 50%;
+    height: auto;
+    margin: 20px;
+    /* object-fit: cover; */
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: attr(width) / attr(height);
+  }
+  
+  .container button:last-of-type {
+    order: 3;
+  }

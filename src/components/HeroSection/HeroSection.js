@@ -8,7 +8,7 @@ function HeroSection() {
   const [isText1, setIsText1] = useState(true);
 
   useEffect(() => {
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       const text1 = document.getElementById("text1") || "";
       const text2 = document.getElementById("text2") || "";
 
@@ -20,10 +20,12 @@ function HeroSection() {
           text1.style.display = "inline";
           text2.style.display = "none";
         }
-
         setIsText1(!isText1);
       }
     }, 8000);
+
+    // Cleanup function to clear the interval
+    return () => clearInterval(intervalId);
   }, [isText1]);
 
   return (

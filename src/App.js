@@ -12,6 +12,7 @@ import ServicesSection from "./components/ServicesSection/ServicesSection";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import NotFound from "./pages/NotFound/NotFound";
+import Project from "./pages/Project/Project";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/services" element={<ServicesSection />} />
           <Route exact path="/projects" element={<ProjectsSection />} />
           <Route exact path="/team" element={<TeamSection />} />
+          <Route exact path="/project" element={<Project />} />
           <Route exact path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -93,7 +93,7 @@
     color: #ffffff;
     background: linear-gradient(to right, #0000ff,#20356E);
     border: 2px solid #8B0000;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
