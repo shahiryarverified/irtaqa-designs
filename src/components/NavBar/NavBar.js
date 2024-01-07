@@ -72,6 +72,7 @@ const NavBar = () => {
                 <Link
                   key={index}
                   to={`/${service.title.replace(/ /g, "").toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}
                 >
                   {service.title}
                 </Link>
@@ -80,7 +81,7 @@ const NavBar = () => {
           )}
         </div>
         {navLinks.map((link, index) => (
-          <Link key={index} to={link.to}>
+          <Link key={index} to={link.to} onClick={() => setIsOpen(false)}>
             {link.name}
           </Link>
         ))}

@@ -1,0 +1,61 @@
+/* NotFound.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .message {
+    transform: scale(1);
+    animation: appear 1s ease-in-out forwards, float 3s ease-in-out infinite;
+  }
+  
+  @keyframes appear {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .title {
+    font-size: 5rem;
+    color: #333;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    color: #666;
+  }
+  
+  .homeLink {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .homeLink:hover {
+    background-color: #0056b3;
+  }
