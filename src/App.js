@@ -1,32 +1,35 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
-import StorySection from "./components/Storysection/StorySection";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Services from "./components/ServicesSection/ServicesSection";
-import TeamSection from "./components/TeamSection/TeamSection";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
-import OurClientsSection from "./components/OurClientsSection/OurClientsSection";
-import ContactUsSection from "./components/ContactUsSection/ContactUsSection";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import AboveHeader from "./components/AboveHeader/AboveHeader";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import ContactUsSection from "./components/ContactUsSection/ContactUsSection";
+import StorySection from "./components/Storysection/StorySection";
+import ServicesSection from "./components/ServicesSection/ServicesSection";
+import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+import TeamSection from "./components/TeamSection/TeamSection";
 
 function App() {
   return (
-    <div className="App">
-      <AboveHeader />
-      <Header />
-      <NavBar />
-      <HeroSection name="hero" />
-      <StorySection name="story" />
-      <Services name="services" />
-      <TeamSection name="team" />
-      <ProjectsSection name="projects" />
-      <OurClientsSection name="clients" />
-      <ContactUsSection name="contact" />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <AboveHeader />
+        <Header />
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/contact" element={<ContactUsSection />} />
+          <Route exact path="/about" element={<StorySection />} />
+          <Route exact path="/services" element={<ServicesSection />} />
+          <Route exact path="/projects" element={<ProjectsSection />} />
+          <Route exact path="/team" element={<TeamSection />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

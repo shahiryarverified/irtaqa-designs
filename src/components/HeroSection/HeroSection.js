@@ -1,26 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css"; // Assuming your CSS is in App.css
 import video from "../../assets/construction.mp4";
 import "@mui/icons-material";
 import { ArrowDownward } from "@mui/icons-material";
 
 function HeroSection() {
-  let isText1 = true;
+  const [isText1, setIsText1] = useState(true);
 
-  setInterval(() => {
-    const text1 = document.getElementById("text1");
-    const text2 = document.getElementById("text2");
+  useEffect(() => {
+    setInterval(() => {
+      const text1 = document.getElementById("text1") || "";
+      const text2 = document.getElementById("text2") || "";
 
-    if (isText1) {
-      text1.style.display = "none";
-      text2.style.display = "inline";
-    } else {
-      text1.style.display = "inline";
-      text2.style.display = "none";
-    }
+      if (text1 !== "" && text2 !== "") {
+        if (isText1) {
+          text1.style.display = "none";
+          text2.style.display = "inline";
+        } else {
+          text1.style.display = "inline";
+          text2.style.display = "none";
+        }
 
-    isText1 = !isText1;
-  }, 8000);
+        setIsText1(!isText1);
+      }
+    }, 8000);
+  }, [isText1]);
 
   return (
     <div className="hero-section">

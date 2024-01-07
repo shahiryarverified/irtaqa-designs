@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import image from "../../assets/logo/1.png";
 
@@ -18,27 +19,29 @@ const NavBar = () => {
   ];
 
   const navLinks = [
-    { name: "Home", anchor: "hero-section", offset: -1100 },
-    { name: "About", anchor: "story-content", offset: isOpen ? -1100 : -200 },
+    { name: "Home", to: "/", anchor: "hero-section" },
+    {
+      name: "About",
+      to: "/about",
+      anchor: "story-content",
+    },
     {
       name: "Projects",
+      to: "/projects",
       anchor: "projects-section",
-      offset: isOpen ? -400 : 0,
     },
-    { name: "Team", anchor: "team-section", offset: isOpen ? -400 : -100 },
-    { name: "Contact", anchor: "contact-us-section", offset: 0 },
+    {
+      name: "Team",
+      to: "/team",
+      anchor: "team-section",
+    },
+    {
+      name: "Contact",
+      to: "/contact",
+      anchor: "contact-us-section",
+      offset: 0,
+    },
   ];
-
-  const scrollToSection = (anchor, offset) => {
-    const targetDiv = document.querySelector(`.${anchor}`);
-    if (targetDiv) {
-      window.scrollTo({
-        top: targetDiv.offsetTop + offset,
-        behavior: "smooth",
-      });
-      setIsOpen(false);
-    }
-  };
 
   return (
     <div className="navbar">
@@ -51,46 +54,35 @@ const NavBar = () => {
         </button>
       </div>
       <div className={isOpen ? "menu open" : "menu"}>
-        <a href="#quote" id="quoteButton">
+        <Link to="/quote" id="quoteButton">
           Quote
-        </a>
+        </Link>
         <div
           className="navbar-with-submenu"
           onMouseEnter={() => setOnServices(true)}
           onMouseLeave={() => setOnServices(false)}
         >
-          <a
-            href="#services"
-            onClick={() =>
-              !isOpen ? scrollToSection("services", isOpen ? -400 : -100) : ""
-            }
-          >
-            Services
-          </a>
+          <Link to="/services">Services</Link>
           {onServices && (
             <div
               className="services-menu"
               style={{ height: `${services.length * 50 + 60}px` }} // Set the height dynamically with additional padding
             >
               {services.map((service, index) => (
-                <a
+                <Link
                   key={index}
-                  href={`#${service.title.replace(/ /g, "").toLowerCase()}`}
+                  to={`/${service.title.replace(/ /g, "").toLowerCase()}`}
                 >
                   {service.title}
-                </a>
+                </Link>
               ))}
             </div>
           )}
         </div>
         {navLinks.map((link, index) => (
-          <a
-            key={index}
-            href={`#${link.anchor}`}
-            onClick={() => scrollToSection(link.anchor, link.offset)}
-          >
+          <Link key={index} to={link.to}>
             {link.name}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
