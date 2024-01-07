@@ -15,7 +15,6 @@
 	align-self: center;
 	justify-content: space-around;
 	z-index: 100;
-	flex: 10%;
   }
   
   .menu.open {
@@ -34,9 +33,12 @@
 	position: sticky;
 	top: 0;
 	width: 100%;
-	display: flex;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30%;
+	padding-right: 30%;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	background-color: white;
 	border-top: 4px solid #8B0000;
 	border-bottom: 4px solid #20356E;
@@ -45,6 +47,7 @@
   }
   
   .logo {
+	display: none;
 	padding: 5px 5% 5px 5%;
 	font-size: 24px;
 	font-weight: bolder;
@@ -116,9 +119,9 @@
   /* For mobile devices */
   @media (max-width: 1100px) {
 	.logo {
-	  font-size: 24px;
-	  font-weight: bolder;
-	  color: #8B0000;
+		display: block;
+		font-size: 24px;
+	  	font-weight: bolder;
 	}
 
 	.logo-hamburger{
@@ -135,6 +138,11 @@
 	  display: none;
 	}
   
+	.navbar{
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+
 	.services-menu {
 		left: -50%;
 	}
