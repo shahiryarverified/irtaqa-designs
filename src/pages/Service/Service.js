@@ -1,8 +1,8 @@
 import "./service.css";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const Service = () => {
-  const projectId = useParams();
+  //   const projectId = useParams();
 
   return (
     <div className="service-container">
