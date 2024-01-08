@@ -38,18 +38,18 @@
     color: #ffffff;
     background: linear-gradient(to right, #0000ff,#20356E);
     border: 2px solid #8B0000;
-    /* border-radius: 30px; */
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
   
   .filter-button:hover {
     transform: translateY(-3px);
+    background: linear-gradient(to left,#366cff, #ff1b1b);
     box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1);
   }
 
   .active {
-    background: linear-gradient(to right, #ff0000,#8b0000); /* Darker red background color for active state */
+    background-color: linear-gradient(to left,#366cff, #ff1b1b); /* Darker red background color for active state */
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Adjust box shadow for active state */
     animation: glow 1s ease-in-out infinite alternate; /* Add a subtle glowing effect */
   }
@@ -64,10 +64,11 @@
   }
 
   .project-card {
-    width: 300px;
+    width: 400px;
     border: .5px solid #ddd;
     box-shadow: 0 8px 16px rgba(255, 100, 100, 0.25);
     margin-bottom: 20px;
+    background-color: #20356E;
     transition: transform 0.3s ease;
   }
   
@@ -77,12 +78,13 @@
   
   .project-image {
     width: 100%;
-    height: 200px;
+    height: auto;
+    object-fit: contain;
   }
   
   .project-info {
     padding: 10px;
-    background-color: #f8f8f8;
+    background-color: #8B0000;
     user-select: none;
   }
   
@@ -90,7 +92,7 @@
     display: block;
     font-size: 22px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin-top: 5px;
   }
   
@@ -102,4 +104,8 @@
     justify-content: center;
     max-width: 70%;
     margin-top: 70px;
+  }
+
+  .projects-grid a {
+    text-decoration: none;
   }

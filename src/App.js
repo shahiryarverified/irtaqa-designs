@@ -13,6 +13,7 @@ import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import NotFound from "./pages/NotFound/NotFound";
 import Project from "./pages/Project/Project";
+import Service from "./pages/Service/Service";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/projects" element={<ProjectsSection />} />
           <Route exact path="/team" element={<TeamSection />} />
           <Route exact path="/project/:id" element={<Project />} />
+          <Route exact path="/service/:id" element={<Service />} />
           <Route exact path="*" element={<NotFound />} />
         </Routes>
         <Footer />

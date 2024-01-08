@@ -24,7 +24,7 @@
 
   .back-button {
     color: #fff;
-	background: linear-gradient(to left,#20356E, #8B0000);
+	  background: linear-gradient(to left,#20356E, #8B0000);
     padding: 15px 40px 15px 40px;
     margin: 2%;
     font-size: 20px;
@@ -55,7 +55,7 @@
 
   .container button:hover, .back-button:hover {
 	color: #fff;
-	background: linear-gradient(to right,#20356E, #8B0000);
+	background: linear-gradient(to left,#366cff, #ff1b1b);
   }
   
   .container button:first-of-type {

@@ -2,7 +2,7 @@
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 73vh;
     width: 100%;
     overflow: hidden;
   }
@@ -36,7 +36,8 @@
   }
   
   .hero-title {
-    font-size: 3rem;
+    font-size: 5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
     white-space: normal; /* Prevent line breaks */
     overflow: hidden; /* Hide overflow text */
@@ -51,18 +52,24 @@
   }
   
   .hero-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 50px;
+    padding: 15px 16px;
+    border-radius: 30px;
     color: white;
-    background: linear-gradient(to right, #ff0000, #8B0000); /* Adjust the color as needed */
+    background: linear-gradient(to right,#20356E, #8B0000); /* Adjust the color as needed */
     border: none;
     cursor: pointer;
+    text-align: center;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
   }
   
-  .hero-button:hover {
-    background-color: #cc0000; /* Darker shade for hover effect */
+  .hero-button:hover {    
+    background: linear-gradient(to left,#366cff, #ff1b1b); /* Darker shade for hover effect */
+  }
+
+  @media (max-width:1100px) {
+    .hero-title{
+      font-size: 2.5rem;
+    }
   }

@@ -75,14 +75,23 @@
 	transition: background-color 0.3s ease-in-out;
   }
   
-  .navbar a:hover {
+  .navbar a:hover, #quoteButton:hover {
 	color: #fff;
-	background: linear-gradient(to right,#20356E, #8B0000);
+    background: linear-gradient(to left,#366cff, #ff1b1b);
+  }
+  
+  .navbar a:active, #quoteButton:active {
+	color: #fff;
+    background: linear-gradient(to left,#366cff, #ff1b1b);
   }
 
   .navbar-with-submenu:hover {
 	color: #fff;
-	background-color: #8B0000;
+	background-color: #366cff;
+}
+
+  .navbar-with-submenu:active {
+	background-color:  #366cff;
 }
   
   #quoteButton {

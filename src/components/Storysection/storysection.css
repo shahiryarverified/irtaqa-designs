@@ -93,18 +93,18 @@
     color: #ffffff;
     background: linear-gradient(to right, #0000ff,#20356E);
     border: 2px solid #8B0000;
-    /* border-radius: 30px; */
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
   
   .story-button:hover {
     transform: translateY(-3px);
+    background: linear-gradient(to left,#366cff, #ff1b1b);
     box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1);
   }
 
   .active {
-    background: linear-gradient(to right, #ff0000, #8B0000); /* Darker red background color for active state */
+    background: linear-gradient(to left,#366cff, #ff1b1b); /* Darker red background color for active state */
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Adjust box shadow for active state */
     animation: glow 1s ease-in-out infinite alternate; /* Add a subtle glowing effect */
   }

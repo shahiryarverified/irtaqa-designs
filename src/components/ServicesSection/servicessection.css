@@ -19,10 +19,11 @@
   
   .ActionAreaCard a {
     text-decoration: none;
+    color: black;
   }
 
   .ActionAreaCard:hover {
-    box-shadow: 0 3px 5px #550000;
+    box-shadow: 0 3px 5px #366cff;
   }
 
   .services {

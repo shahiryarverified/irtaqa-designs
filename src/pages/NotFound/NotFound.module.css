@@ -47,15 +47,14 @@
   .homeLink {
     margin-top: 20px;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    background-color: #007bff;
-    border-radius: 5px;
+    background: linear-gradient(to left,#20356E, #8B0000);
     transition: background-color 0.3s;
   }
   
   .homeLink:hover {
-    background-color: #0056b3;
+    background: linear-gradient(to left,#366cff, #ff1b1b);
   }

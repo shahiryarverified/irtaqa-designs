@@ -63,14 +63,14 @@ const NavBar = () => {
           onMouseEnter={() => setOnServices(true)}
           onMouseLeave={() => setOnServices(false)}
         >
-          <div
-            className="link-with-icon"
-            onClick={() => setOnServices(!onServices)}
-          >
+          <div className="link-with-icon">
             <Link to="/services" onClick={() => setIsOpen(false)}>
               Services
             </Link>
-            <ArrowDropDown className="service-arrow" />
+            <ArrowDropDown
+              className="service-arrow"
+              onClick={() => setOnServices(!onServices)}
+            />
           </div>
           {onServices && (
             <div
@@ -80,7 +80,7 @@ const NavBar = () => {
               {services.map((service, index) => (
                 <Link
                   key={index}
-                  to={`/${service.title.replace(/ /g, "").toLowerCase()}`}
+                  to={`/service/${index + 1}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {service.title}
