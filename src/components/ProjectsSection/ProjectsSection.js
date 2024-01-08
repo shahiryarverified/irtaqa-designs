@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import image1 from "../../assets/projects/1.jpg";
 import image2 from "../../assets/projects/2.jpg";
@@ -82,16 +83,18 @@ const ProjectsSection = () => {
         {projects.map(
           (project, index) =>
             (activeSection === "All" || project.type === activeSection) && (
-              <div className="project-card" key={index}>
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="project-image"
-                />
-                <div className="project-info">
-                  <span className="project-name">{project.name}</span>
+              <Link to={`/project/${index + 1}`} key={index}>
+                <div className="project-card" key={index}>
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="project-image"
+                  />
+                  <div className="project-info">
+                    <span className="project-name">{project.name}</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             )
         )}
       </div>

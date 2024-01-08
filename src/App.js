@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/services" element={<ServicesSection />} />
           <Route exact path="/projects" element={<ProjectsSection />} />
           <Route exact path="/team" element={<TeamSection />} />
-          <Route exact path="/project" element={<Project />} />
+          <Route exact path="/project/:id" element={<Project />} />
           <Route exact path="*" element={<NotFound />} />
         </Routes>
         <Footer />

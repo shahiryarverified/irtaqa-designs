@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .slideshow {
@@ -14,7 +16,7 @@
     position: relative; /* Needed for absolute positioning of images */
   }
   
-.slideshow p,h2{
+.slideshow p, h1{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: justify;
@@ -23,8 +25,10 @@
   .back-button {
     color: #fff;
 	background: linear-gradient(to left,#20356E, #8B0000);
-    padding: 20px;
+    padding: 15px 40px 15px 40px;
     margin: 2%;
+    font-size: 20px;
+    font-weight: 300;
     cursor: pointer;
   }
 
@@ -41,6 +45,7 @@
     border-radius: 50px;
     color: white;
     padding: 15px ;
+    /* margin: 2px; */
     text-align: center;
     font-size: 10px;
     transition-duration: 0.4s;
@@ -57,12 +62,23 @@
     order: 1;
   }
   
-  .container img {
-    order: 2;
-    min-width: 50%;
+  .slideshow-image {
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+    transform: scale(1) rotate(0deg);
+  }
+  
+  .slideshow-image.changing {
+    opacity: 0;
+    transform: scale(0.1) rotate(0deg);
+  }
+
+  .slideshow-image {
+    max-width: 80%;
     height: auto;
     margin: 20px;
-    /* object-fit: cover; */
+    border: 5px solid #20356E;
+    border-radius: 20px;
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
     aspect-ratio: attr(width) / attr(height);
   }

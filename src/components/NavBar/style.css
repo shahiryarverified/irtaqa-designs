@@ -82,7 +82,7 @@
 
   .navbar-with-submenu:hover {
 	color: #fff;
-	background: linear-gradient(to right,#20356E, #8B0000);
+	background-color: #8B0000;
 }
   
   #quoteButton {
