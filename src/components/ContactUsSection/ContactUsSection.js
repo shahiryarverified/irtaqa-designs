@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./contactussection.css";
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 
 function ContactUsSection() {

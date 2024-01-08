@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import { Link } from "react-router-dom";
 import service1 from "../../assets/serviceImages/service1.jpg";
 import service2 from "../../assets/serviceImages/service2.jpg";
 import service3 from "../../assets/serviceImages/service3.jpg";
@@ -14,25 +15,27 @@ import service6 from "../../assets/serviceImages/service6.jpg";
 import service7 from "../../assets/serviceImages/service7.jpg";
 import service8 from "../../assets/serviceImages/service8.jpg";
 
-const ActionAreaCard = ({ serviceName, context, img }) => {
+const ActionAreaCard = ({ serviceName, context, img, serviceId }) => {
   return (
     <Card className="ActionAreaCard">
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={img}
-          alt="green iguana"
-        />
-        <CardContent className="CardContent">
-          <Typography gutterBottom variant="h5" component="div">
-            {serviceName}
-          </Typography>
-          <Typography variant="body1" color="text.primary">
-            {context}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <Link to={`/service/${serviceId}`}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image={img}
+            alt="green iguana"
+          />
+          <CardContent className="CardContent">
+            <Typography gutterBottom variant="h5" component="div">
+              {serviceName}
+            </Typography>
+            <Typography variant="body1" color="text.primary">
+              {context}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
     </Card>
   );
 };
@@ -109,6 +112,7 @@ const ServicesSection = () => {
             serviceName={service.title}
             context={service.description}
             img={service.image}
+            serviceId={index}
           />
         ))}
       </div>

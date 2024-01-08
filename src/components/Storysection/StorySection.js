@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.css";
+import "./storysection.css";
 import image from "../../assets/image.jpg";
 import image2 from "../../assets/image2.jpg";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css"; // Make sure to import the CSS file
+import "./ourclientssection.css"; // Make sure to import the CSS file
 import image1 from "../../assets/clients/1.jpeg";
 import image2 from "../../assets/clients/2.jpeg";
 import image3 from "../../assets/clients/3.jpeg";
@@ -29,7 +29,7 @@ const clientImages = [
 const OurClientsSection = () => {
   return (
     <div className="our-clients-section">
-      <div className="header">
+      <div className="headings">
         <h4>PEOPLE LOVE US</h4>
         <h1>Our Clients</h1>
       </div>

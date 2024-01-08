@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./style.css"; // Assuming your CSS is in App.css
+import "./herosection.css"; // Assuming your CSS is in App.css
 import video from "../../assets/construction.mp4";
 import "@mui/icons-material";
 import { ArrowDownward } from "@mui/icons-material";

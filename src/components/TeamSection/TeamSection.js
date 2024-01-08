@@ -1,6 +1,6 @@
 // TeamSection.js
 import React from "react";
-import "./style.css";
+import "./teamsection.css";
 import image1 from "../../assets/profileImages/John.jpeg";
 import image2 from "../../assets/profileImages/Jane.jpeg";
 import image3 from "../../assets/profileImages/Alex.jpeg";

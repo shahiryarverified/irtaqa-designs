@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeftRounded, ChevronRightRounded } from "@mui/icons-material";
-import "./style.css";
+import "./project.css";
 import { useParams } from "react-router-dom";
 import image1 from "../../assets/projects/7.jpeg";
 import image2 from "../../assets/projects/8.jpeg";
@@ -63,7 +63,7 @@ const Project = () => {
         src={placeholderImages[current]}
         alt={`slide +${projectId}`}
       />
-      <div className="slideshow">
+      <div className="slideshow-project">
         <div className="container">
           <button onClick={prevSlide}>
             <ChevronLeftRounded />

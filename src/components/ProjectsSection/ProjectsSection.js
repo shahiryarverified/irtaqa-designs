@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./projectssection.css";
 import image1 from "../../assets/projects/1.jpg";
 import image2 from "../../assets/projects/2.jpg";
 import image3 from "../../assets/projects/3.jpg";

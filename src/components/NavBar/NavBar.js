@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./navbar.css";
 import image from "../../assets/logo/1.png";
 import { ArrowDropDown } from "@mui/icons-material";
 
@@ -67,7 +67,9 @@ const NavBar = () => {
             className="link-with-icon"
             onClick={() => setOnServices(!onServices)}
           >
-            <Link to="/services">Services</Link>
+            <Link to="/services" onClick={() => setIsOpen(false)}>
+              Services
+            </Link>
             <ArrowDropDown className="service-arrow" />
           </div>
           {onServices && (

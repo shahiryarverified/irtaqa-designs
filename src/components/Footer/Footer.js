@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css"; // Assuming the CSS file is named style.css and is in the same directory
+import "./footer.css"; // Assuming the CSS file is named style.css and is in the same directory
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import image from "../../assets/logo/1.png";
 
