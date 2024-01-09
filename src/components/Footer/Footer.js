@@ -30,13 +30,18 @@ const Footer = () => {
         </div>
         <div className="footer-map">
           <iframe
-            title="irtaqa-designs"
+            data-lazyloaded="1"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6806.372598311991!2d74.384357!3d31.464061000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905dd16ba25d7%3A0xbae9c86693ece994!2sIrtiqa%20Designs!5e0!3m2!1sen!2sus!4v1704393506183!5m2!1sen!2sus"
-            width="150"
-            height="150"
-            allowFullScreen=""
+            data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6806.372598311991!2d74.384357!3d31.464061000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905dd16ba25d7%3A0xbae9c86693ece994!2sIrtiqa%20Designs!5e0!3m2!1sen!2sus!4v1704393506183!5m2!1sen!2sus"
+            width="300"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen={true}
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Irtaqa Designs"
+            data-ll-status="loaded"
+            class="entered litespeed-loaded"
           ></iframe>
         </div>
         <div className="footer-section links-section">

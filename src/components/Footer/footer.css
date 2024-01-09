@@ -6,15 +6,16 @@
 
 .footer {
     display: flex;
-    padding: 20px;
+    justify-content: center;
+    padding: 80px;
     background-color: #f8f8f8;
     font-family: 'Arial', sans-serif;
   }
   
   .footer-content {
     display: flex;
-    min-width: 100%;
-    justify-content: center;
+    min-width: 70%;
+    justify-content: space-around;
     align-items: center;
   }
   

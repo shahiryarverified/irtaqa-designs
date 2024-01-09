@@ -67,7 +67,7 @@
   .project-card {
     width: 400px;
     border: .5px solid #ddd;
-    box-shadow: 0 8px 16px rgba(255, 100, 100, 0.25);
+    box-shadow: 0 14px 28px rgba(20, 20, 20, 0.75);
     margin-bottom: 20px;
     border-radius: 5px;
     /* background-color: #20356E; */
