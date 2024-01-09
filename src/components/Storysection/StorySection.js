@@ -9,6 +9,10 @@ const StorySection = () => {
   return (
     // JSX for the "Our Story" section
     <section className="story">
+      <div className="headings">
+        <h4>WE DO OUR BEST!</h4>
+        <h2>Our Story</h2>
+      </div>
       <div className="story-buttons">
         <button
           className={

@@ -46,7 +46,10 @@ const ProjectsSection = () => {
 
   return (
     <div className="projects-section">
-      <h2>Most Popular Projects</h2>
+      <div className="headings">
+        <h4>WE WORK SMARTLY!</h4>
+        <h2>Our Portfolio</h2>
+      </div>
       <div className="filter-buttons">
         <button
           className={

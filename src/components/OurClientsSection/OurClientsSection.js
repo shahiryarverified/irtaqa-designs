@@ -30,7 +30,7 @@ const OurClientsSection = () => {
   return (
     <div className="our-clients-section">
       <div className="headings">
-        <h4>PEOPLE LOVE US</h4>
+        <h4>PEOPLE LOVE US!</h4>
         <h2>Our Clients</h2>
       </div>
       <div className="slideshow">

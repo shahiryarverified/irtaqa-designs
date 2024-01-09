@@ -1,9 +1,13 @@
 .our-clients-section {
-    width: 100%;
-    padding-top: 75px;
-    padding-bottom: 100px;
-    background-color: #F7F7F7;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-bottom: 50px;
+  /* padding-top: 50px; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    /* overflow: hidden; */
   }
   
   .headings h4, h2{
@@ -23,9 +27,22 @@
     padding-bottom: 50px;
   }
 
+  .headings h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 4px;
+    background-color: red;
+  }
+
   .slideshow {
     position: relative;
     width: 100%;
+    
+    background-color: #F7F7F7;
     overflow: hidden;
   }
   

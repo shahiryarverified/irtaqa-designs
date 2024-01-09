@@ -6,9 +6,12 @@ const Service = () => {
 
   return (
     <div className="service-container">
-      <button className="back-button" onClick={() => window.history.back()}>
-        Back
-      </button>
+      <div className="project-title-container">
+        <h1>Service Name</h1>
+        <button className="back-button" onClick={() => window.history.back()}>
+          Back
+        </button>
+      </div>
     </div>
   );
 };
