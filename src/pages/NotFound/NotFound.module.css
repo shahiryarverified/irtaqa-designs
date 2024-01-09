@@ -49,6 +49,7 @@
     display: inline-block;
     padding: 15px 25px;
     font-size: 1rem;
+    border-radius: 5px;
     text-decoration: none;
     color: white;
     background: linear-gradient(to left,#20356E, #8B0000);

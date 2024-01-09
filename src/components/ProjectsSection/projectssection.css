@@ -21,6 +21,7 @@
     padding: 10px 20px;
     width: 175px;
     margin: 5px 5px;
+    border-radius: 5px;
     border: 2px solid #8b0000;
     background-color: #f00000;
     color: white;
@@ -68,7 +69,8 @@
     border: .5px solid #ddd;
     box-shadow: 0 8px 16px rgba(255, 100, 100, 0.25);
     margin-bottom: 20px;
-    background-color: #20356E;
+    border-radius: 5px;
+    /* background-color: #20356E; */
     transition: transform 0.3s ease;
   }
   
@@ -79,12 +81,14 @@
   .project-image {
     width: 100%;
     height: auto;
+    border-radius: 5px;
     object-fit: contain;
   }
   
   .project-info {
     padding: 10px;
     background-color: #8B0000;
+    border-radius: 5px;
     user-select: none;
   }
   

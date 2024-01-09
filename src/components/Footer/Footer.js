@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./footer.css"; // Assuming the CSS file is named style.css and is in the same directory
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import image from "../../assets/logo/1.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [targetDiv, setTargetDiv] = useState(null);
+
+  useEffect(() => {
+    if (targetDiv) {
+      window.scrollTo({
+        top: targetDiv.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }, [targetDiv]);
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -29,94 +41,45 @@ const Footer = () => {
         </div>
         <div className="footer-section links-section">
           <div className="footer-column">
-            <a
-              href="#home"
+            <Link
+              to="/"
               onClick={() => {
-                const targetDiv = document.querySelector("#main"); // Replace "yourDivName" with the actual name of your div
-                if (targetDiv) {
-                  window.scrollTo({
-                    top: targetDiv.offsetTop,
-                    behavior: "smooth",
-                  });
-                }
+                setTargetDiv(0);
+                setTargetDiv(document.querySelector("#main"));
               }}
             >
               Home
-            </a>
-            <a
-              href="#about"
-              onClick={() => {
-                const targetDiv = document.querySelector(".story-content"); // Replace "yourDivName" with the actual name of your div
-                if (targetDiv) {
-                  window.scrollTo({
-                    top: targetDiv.offsetTop,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              About
-            </a>
-            <a
-              href="#team"
-              onClick={() => {
-                const targetDiv = document.querySelector(".team-section"); // Replace "yourDivName" with the actual name of your div
-                if (targetDiv) {
-                  window.scrollTo({
-                    top: targetDiv.offsetTop,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              Team
-            </a>
+            </Link>
+            <Link to="/about">About</Link>
+            <Link to="/team">Team</Link>
           </div>
           <div className="footer-column">
-            <a
-              href="#projects"
+            <Link
+              to="/"
               onClick={() => {
-                const targetDiv = document.querySelector(".projects-section"); // Replace "yourDivName" with the actual name of your div
-                if (targetDiv) {
-                  window.scrollTo({
-                    top: targetDiv.offsetTop,
-                    behavior: "smooth",
-                  });
-                }
+                setTargetDiv(0);
+                setTargetDiv(document.querySelector(".projects-section"));
               }}
             >
               Projects
-            </a>
-            <a
-              href="#clients"
+            </Link>
+            <Link
+              to="/"
               onClick={() => {
-                const targetDiv = document.querySelector(
-                  ".our-clients-section"
-                ); // Replace "yourDivName" with the actual name of your div
-                if (targetDiv) {
-                  window.scrollTo({
-                    top: targetDiv.offsetTop,
-                    behavior: "smooth",
-                  });
-                }
+                setTargetDiv(0);
+                setTimeout(() => {
+                  const section = document.querySelector(
+                    ".our-clients-section"
+                  );
+                  if (section) {
+                    setTargetDiv(section);
+                  }
+                }, 0);
               }}
             >
               Clients
-            </a>
-            <a
-              href="#contact"
-              onClick={() => {
-                const targetDiv = document.querySelector(".contact-us-section"); // Replace "yourDivName" with the actual name of your div
-                if (targetDiv) {
-                  window.scrollTo({
-                    top: targetDiv.offsetTop,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              Contact
-            </a>
+            </Link>
+            <Link to="/contact">Contact</Link>
           </div>
         </div>
       </div>

@@ -47,6 +47,7 @@
   .story-image img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
     display: block;
   }
   
@@ -76,6 +77,7 @@
     padding: 10px 20px;
     width: 175px;
     margin: 5px 5px;
+    border-radius: 5px;
     border: 2px solid #8b0000;
     background-color: #f00000;
     color: white;

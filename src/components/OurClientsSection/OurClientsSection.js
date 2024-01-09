@@ -31,7 +31,7 @@ const OurClientsSection = () => {
     <div className="our-clients-section">
       <div className="headings">
         <h4>PEOPLE LOVE US</h4>
-        <h1>Our Clients</h1>
+        <h2>Our Clients</h2>
       </div>
       <div className="slideshow">
         <div className="slideshow-slider">
