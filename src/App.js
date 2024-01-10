@@ -19,21 +19,21 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <AboveHeader />
-        <Header />
-        <NavBar />
+        {/* <AboveHeader /> */}
+        {/* <Header /> */}
+        {/* <NavBar /> */}
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
+          {/* <Route exact path="/" element={<HomePage />} />
           <Route exact path="/contact" element={<ContactUsSection />} />
           <Route exact path="/about" element={<StorySection />} />
           <Route exact path="/services" element={<ServicesSection />} />
           <Route exact path="/projects" element={<ProjectsSection />} />
           <Route exact path="/team" element={<TeamSection />} />
           <Route exact path="/project/:id" element={<Project />} />
-          <Route exact path="/service/:id" element={<Service />} />
+          <Route exact path="/service/:id" element={<Service />} /> */}
           <Route exact path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
