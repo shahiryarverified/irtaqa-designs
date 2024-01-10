@@ -1,19 +1,19 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import NavBar from "./components/NavBar/NavBar";
-import AboveHeader from "./components/AboveHeader/AboveHeader";
+// import Header from "./components/Header/Header";
+// import Footer from "./components/Footer/Footer";
+// import NavBar from "./components/NavBar/NavBar";
+// import AboveHeader from "./components/AboveHeader/AboveHeader";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
-import ContactUsSection from "./components/ContactUsSection/ContactUsSection";
-import StorySection from "./components/Storysection/StorySection";
-import ServicesSection from "./components/ServicesSection/ServicesSection";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
-import TeamSection from "./components/TeamSection/TeamSection";
+// import HomePage from "./pages/HomePage/HomePage";
+// import ContactUsSection from "./components/ContactUsSection/ContactUsSection";
+// import StorySection from "./components/Storysection/StorySection";
+// import ServicesSection from "./components/ServicesSection/ServicesSection";
+// import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+// import TeamSection from "./components/TeamSection/TeamSection";
 import NotFound from "./pages/NotFound/NotFound";
-import Project from "./pages/Project/Project";
-import Service from "./pages/Service/Service";
+// import Project from "./pages/Project/Project";
+// import Service from "./pages/Service/Service";
 
 function App() {
   return (
