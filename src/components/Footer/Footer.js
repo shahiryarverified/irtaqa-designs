@@ -10,7 +10,7 @@ const Footer = () => {
   useEffect(() => {
     if (targetDiv) {
       window.scrollTo({
-        top: targetDiv.offsetTop,
+        top: targetDiv.offsetTop - 100,
         behavior: "smooth",
       });
     }
@@ -55,8 +55,34 @@ const Footer = () => {
             >
               Home
             </Link>
-            <Link to="/about">About</Link>
-            <Link to="/team">Team</Link>
+            <Link
+              to="/about"
+              onClick={() => {
+                setTargetDiv(0);
+                setTimeout(() => {
+                  const section = document.querySelector(".story-section");
+                  if (section) {
+                    setTargetDiv(section);
+                  }
+                }, 0);
+              }}
+            >
+              About
+            </Link>
+            <Link
+              to="/team"
+              onClick={() => {
+                setTargetDiv(0);
+                setTimeout(() => {
+                  const section = document.querySelector(".team-section");
+                  if (section) {
+                    setTargetDiv(section);
+                  }
+                }, 0);
+              }}
+            >
+              Team
+            </Link>
           </div>
           <div className="footer-column">
             <Link
@@ -84,7 +110,20 @@ const Footer = () => {
             >
               Clients
             </Link>
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/contact"
+              onClick={() => {
+                setTargetDiv(0);
+                setTimeout(() => {
+                  const section = document.querySelector(".contact-us-section");
+                  if (section) {
+                    setTargetDiv(section);
+                  }
+                }, 0);
+              }}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
