@@ -201,13 +201,9 @@ const Footer = () => {
                 key={index}
                 to={`/service/${index + 1}`}
                 onClick={() => {
-                  setTargetDiv(0);
                   setTimeout(() => {
-                    const section = document.querySelector(".header-div");
-                    if (section) {
-                      setTargetDiv(section);
-                    }
-                  }, 0);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }, 10);
                 }}
               >
                 {service.title}

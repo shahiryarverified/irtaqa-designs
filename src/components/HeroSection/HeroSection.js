@@ -40,7 +40,7 @@ function HeroSection() {
           We Provide Our Undersanding and Construction Services.
         </span>
         <span id="text2" style={{ display: "none" }} className="hero-title">
-          We Are Professional For Building Construction.
+          We Are Professional For Building Structures.
         </span>
         <button
           className="hero-button"
