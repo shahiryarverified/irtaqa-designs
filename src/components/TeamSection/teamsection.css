@@ -1,110 +1,61 @@
+@media (max-width:1100px) {
+  .profile-image img{
+    min-width:50%;
+  }
+}
+
   .team-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
     padding-bottom: 100px;
     padding-top: 50px;
     background-color: #EDF2F7;
   }
   
-  .team-section h2 {
-    text-transform: uppercase;
-    color: #333;
-    position: relative;
-  }
-  
-  .team-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background-color: red;
-  }
-
   .team-members {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap;
     justify-content: center;
-    max-width: 70%;
-    margin-top: 70px;
   }
-    
-  .show-all-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-  }
-  
+
   .team-member-profile {
     color: #8b0000;
-    background-color: #fff;
-    width: 250px;
-    /* border: 2px solid #f00000; */
-    border-radius: 50px 50px 500px 500px;
+    /* background-color: #fff; */
+    position: relative;
+    width: 100%;
+    z-index: 2;
     transition: transform 0.1s ease-in-out;
   }
 
-  .team-member-profile:hover {
-    color: #fff;
-    border: 0px;
-    background-color: #8b0000;
-    transform: scale(0.95);
-  }
-  
-  .team-member-profile:hover .profile-details p {
-    color: #ffffff;
-    border-radius: 5%;
-  }
-
-  .team-member-profile {
-    position: relative;
-    padding: 0px 20px 20px 20px;
-  }
-
-  .team-member-profile::after {
-    content: '';
+  .team-member-profile-background {
+    background: linear-gradient(to right,#20356E, #8B0000);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    background-color: #8b0000;
-    opacity: 1;
-    transition: width 1s, height 1s, opacity 1s, top 1s, left 1s;
-  }
-  
-  .team-member-profile:hover::after {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-  }
-  
-  .profile-image img {
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-top: 20px;
-    border-radius: 500px;
+    height: 50%;
+    z-index: -1;
+  }
+
+  .profile-image img {
+    width: 20%;
+    border-radius: 5px;
+    margin-top: 10%;
   }
   
   .profile-details h3 {
-    font-size: 1.75rem;
-    padding-top: 15px;
+    font-size: 2.2rem;
+    color: #8b0000;
   }
   
   .profile-details p {
-    color: #8b0000;
-    font-size: 0.85rem;
-    padding-top: 10px;
-    padding-bottom: 15px;
+    color: #4d4d4d;
+    font-weight: 500;
+    font-size: 1.2rem;
   }
   .profile-details h3,
   .profile-details p {

@@ -18,7 +18,14 @@ import service8 from "../../assets/serviceImages/service8.jpg";
 const ActionAreaCard = ({ serviceName, context, img, serviceId }) => {
   return (
     <Card className="ActionAreaCard">
-      <Link to={`/service/${serviceId}`}>
+      <Link
+        to={`/service/${serviceId}`}
+        onClick={() => {
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 10);
+        }}
+      >
         <CardActionArea>
           <CardMedia
             component="img"

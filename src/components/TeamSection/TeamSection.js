@@ -13,13 +13,14 @@ import image8 from "../../assets/profileImages/Olivia.jpeg";
 const TeamMemberProfile = ({ member }) => {
   return (
     <div className="team-member-profile">
+      <div className="profile-image">
+        <img src={member.image} alt={member.name} />
+      </div>
       <div className="profile-details">
         <h3>{member.name}</h3>
         <p>{member.position}</p>
       </div>
-      <div className="profile-image">
-        <img src={member.image} alt={member.name} />
-      </div>
+      <div className="team-member-profile-background"></div>
     </div>
   );
 };
@@ -78,7 +79,10 @@ const TeamSection = () => {
 
   return (
     <div className="team-section">
-      <h2>Our Team</h2>
+      <div className="headings">
+        <h4>THE BEST IN THE MARKET!</h4>
+        <h2>Our Team</h2>
+      </div>
       <div className="team-members">
         {teamMembers.map((member) => (
           <TeamMemberProfile key={member.id} member={member} />
