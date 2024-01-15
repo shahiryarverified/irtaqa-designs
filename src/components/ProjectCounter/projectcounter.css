@@ -1,3 +1,11 @@
+@media (max-width:768px) {
+    .project-counter{
+        flex-direction: column;
+        min-height: 900px;
+        gap: 5% !important;
+    }
+}
+
 .project-counter{
     position: relative;
     display: flex;
