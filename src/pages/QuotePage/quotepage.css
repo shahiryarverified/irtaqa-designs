@@ -1,0 +1,115 @@
+@media (max-width:1100px) {
+    .quote-section{
+        flex-direction: column;
+    }
+    .quote-form{
+        align-self: center;
+        min-width: 90%;
+    }
+    .contact-phone,
+    .contact-email,
+    .office{
+        width: 100%;
+    }
+    .contact-details{
+        align-self: center;
+        min-width: 90%;
+    }
+    .quote{
+        min-width: 100%;
+    }
+}
+.quote {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+    
+  .quote-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  }
+  
+  .quote-form {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+  }
+  
+  .quote-form label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .quote-form input[type="text"],
+  .quote-form input[type="email"],
+  .quote-form select,
+  .quote-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #8b0000;
+    border-radius: 4px;
+  }
+  
+  .quote-form textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .quote-form button[type="submit"] {
+    padding: 10px 20px;
+    background: linear-gradient(to left, #8b0000, #20356E);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quote-form button[type="submit"]:hover {
+    background: linear-gradient(to left,#366cff, #ff1b1b);
+  }
+  
+  .contact-details {
+    background: linear-gradient(to left, #8b0000, #20356E);
+    color: #fff;
+    border-radius: 5px;
+    width: 35%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact-header h3 {
+    border-left: 5px solid #f0ad4e;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .office h4,
+  .contact-email h4,
+  .contact-phone h4 {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  
+  .office p,
+  .contact-email p,
+  .contact-phone p {
+    font-size: 0.9em;
+    margin-left: 20px;
+  }
+  
+  .social-media {
+    margin-top: 20px;
+    /* Add styles for social media icons */
+  }

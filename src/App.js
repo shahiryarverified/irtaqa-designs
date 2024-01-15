@@ -14,6 +14,7 @@ import TeamSection from "./components/TeamSection/TeamSection";
 import NotFound from "./pages/NotFound/NotFound";
 import Project from "./pages/Project/Project";
 import Service from "./pages/Service/Service";
+import QuotePage from "./pages/QuotePage/QuotePage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/contact" element={<ContactUsSection />} />
+          <Route exact path="/quote" element={<QuotePage />} />
           <Route exact path="/about" element={<StorySection />} />
           <Route exact path="/services" element={<ServicesSection />} />
           <Route exact path="/projects" element={<ProjectsSection />} />

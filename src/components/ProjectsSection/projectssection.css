@@ -46,22 +46,13 @@
   .filter-button:hover {
     transform: translateY(-3px);
     background: linear-gradient(to left,#366cff, #ff1b1b);
-    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.5);
   }
 
   .active {
     background-color: linear-gradient(to left,#366cff, #ff1b1b); /* Darker red background color for active state */
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1); /* Adjust box shadow for active state */
     animation: glow 1s ease-in-out infinite alternate; /* Add a subtle glowing effect */
-  }
-
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 5px #e00202, 0 0 10px #e00202, 0 0 15px #e00202;
-    }
-    to {
-      box-shadow: 0 0 7px #e00202, 0 0 12px #e00202, 0 0 20px #e00202;
-    }
   }
 
   .project-card {

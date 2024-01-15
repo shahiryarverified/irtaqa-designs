@@ -102,7 +102,7 @@
   .story-button:hover {
     transform: translateY(-3px);
     background: linear-gradient(to left,#366cff, #ff1b1b);
-    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.5);
   }
 
   .active {
@@ -113,10 +113,10 @@
   
   @keyframes glow {
     from {
-      box-shadow: 0 0 2.5px #e00202, 0 0 5px #e00202, 0 0 7.5px #e00202;
+      box-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff;
     }
     to {
-      box-shadow: 0 0 3.5px #e00202, 0 0 6px #e00202, 0 0 10px #e00202;
+      box-shadow: 0 0 3.5px #3202e0, 0 0 6px #1102e0, 0 0 10px #0223e0;
     }
   }
 

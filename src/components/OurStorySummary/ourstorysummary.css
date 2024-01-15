@@ -33,13 +33,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 400px;
     background: linear-gradient(to left, #8b0000, #20356E);
 }
 
 .our-story-summary-inner-section{
     width: 60%;
-    height: 90%;
+    height: 70%;
     display: flex;
     padding: 3% 20px;
     justify-content: flex-start;
