@@ -22,7 +22,7 @@
 /* CSS for the "Our Story" section */
 .story {
     display: flex;
-    background-color: #EDF2F7;
+    /* background-color: #EDF2F7; */
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -93,7 +93,7 @@
     text-align: center;
     text-decoration: none;
     color: #ffffff;
-    background: linear-gradient(to right, #0000ff,#20356E);
+    background: linear-gradient(to right, #8b0000,#20356E);
     border: 2px solid #8B0000;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;

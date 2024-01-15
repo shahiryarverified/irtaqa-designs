@@ -5,6 +5,10 @@ import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 function ContactUsSection() {
   return (
     <div className="contact-us-section">
+      <div className="headings">
+        <h4>WE WOULD LOVE TO HEAR FROM YOU!</h4>
+        <h2>Contact Us</h2>
+      </div>
       <div className="contact-us-section-inner">
         <div className="contact-info">
           <h2>CONTACT US</h2>

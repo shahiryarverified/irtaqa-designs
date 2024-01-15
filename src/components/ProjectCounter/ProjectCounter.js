@@ -1,11 +1,6 @@
 import React from "react";
 import "./projectcounter.css";
-import {
-  CheckCircle,
-  EmojiEmotions,
-  LocationCity,
-  SentimentSatisfiedAlt,
-} from "@mui/icons-material";
+import { CheckCircle, EmojiEmotions, LocationCity } from "@mui/icons-material";
 
 const ProjectCounter = () => {
   return (
