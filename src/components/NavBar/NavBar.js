@@ -55,7 +55,14 @@ const NavBar = () => {
         </button>
       </div>
       <div className={isOpen ? "menu open" : "menu"}>
-        <Link to="/quote" id="quoteButton">
+        <Link
+          to="/quote"
+          id="quoteButton"
+          onClick={() => {
+            setIsOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           Quote
         </Link>
         <div
@@ -64,7 +71,13 @@ const NavBar = () => {
           onMouseLeave={() => setOnServices(false)}
         >
           <div className="link-with-icon">
-            <Link to="/services" onClick={() => setIsOpen(false)}>
+            <Link
+              to="/services"
+              onClick={() => {
+                setIsOpen(false);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               Services
             </Link>
             <ArrowDropDown
@@ -81,7 +94,10 @@ const NavBar = () => {
                 <Link
                   key={index}
                   to={`/service/${index + 1}`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                 >
                   {service.title}
                 </Link>
@@ -90,7 +106,14 @@ const NavBar = () => {
           )}
         </div>
         {navLinks.map((link, index) => (
-          <Link key={index} to={link.to} onClick={() => setIsOpen(false)}>
+          <Link
+            key={index}
+            to={link.to}
+            onClick={() => {
+              setIsOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
             {link.name}
           </Link>
         ))}
