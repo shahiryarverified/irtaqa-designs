@@ -55,6 +55,76 @@ const NavBar = () => {
         </button>
       </div>
       <div className={isOpen ? "menu open" : "menu"}>
+        {navLinks.map((link, index) => {
+          if (link.name === "About") {
+            return (
+              <React.Fragment key={index}>
+                <Link
+                  to={link.to}
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  {link.name}
+                </Link>
+                <div
+                  className="navbar-with-submenu"
+                  onMouseEnter={() => setOnServices(true)}
+                  onMouseLeave={() => setOnServices(false)}
+                >
+                  <div className="link-with-icon">
+                    <Link
+                      to="/services"
+                      onClick={() => {
+                        setIsOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Services
+                    </Link>
+                    <ArrowDropDown
+                      className="service-arrow"
+                      onClick={() => setOnServices(!onServices)}
+                    />
+                  </div>
+                  {onServices && (
+                    <div
+                      className="services-menu"
+                      style={{ height: `${services.length * 50 + 60}px` }} // Set the height dynamically with additional padding
+                    >
+                      {services.map((service, serviceIndex) => (
+                        <Link
+                          key={serviceIndex}
+                          to={`/service/${serviceIndex + 1}`}
+                          onClick={() => {
+                            setIsOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {service.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </React.Fragment>
+            );
+          } else {
+            return (
+              <Link
+                key={index}
+                to={link.to}
+                onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                {link.name}
+              </Link>
+            );
+          }
+        })}
         <Link
           to="/quote"
           id="quoteButton"
@@ -65,58 +135,6 @@ const NavBar = () => {
         >
           Quote
         </Link>
-        <div
-          className="navbar-with-submenu"
-          onMouseEnter={() => setOnServices(true)}
-          onMouseLeave={() => setOnServices(false)}
-        >
-          <div className="link-with-icon">
-            <Link
-              to="/services"
-              onClick={() => {
-                setIsOpen(false);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
-              Services
-            </Link>
-            <ArrowDropDown
-              className="service-arrow"
-              onClick={() => setOnServices(!onServices)}
-            />
-          </div>
-          {onServices && (
-            <div
-              className="services-menu"
-              style={{ height: `${services.length * 50 + 60}px` }} // Set the height dynamically with additional padding
-            >
-              {services.map((service, index) => (
-                <Link
-                  key={index}
-                  to={`/service/${index + 1}`}
-                  onClick={() => {
-                    setIsOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  {service.title}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-        {navLinks.map((link, index) => (
-          <Link
-            key={index}
-            to={link.to}
-            onClick={() => {
-              setIsOpen(false);
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            {link.name}
-          </Link>
-        ))}
       </div>
     </div>
   );
