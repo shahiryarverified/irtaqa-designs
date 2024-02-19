@@ -86,26 +86,16 @@ const ProjectsSection = () => {
         {projects.map(
           (project, index) =>
             (activeSection === "All" || project.type === activeSection) && (
-              <Link
-                to={`/project/${index + 1}`}
-                onClick={() => {
-                  setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }, 10);
-                }}
-                key={index}
-              >
-                <div className="project-card" key={index}>
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="project-image"
-                  />
-                  <div className="project-info">
-                    <span className="project-name">{project.name}</span>
-                  </div>
+              <div className="project-card" key={index}>
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="project-image"
+                />
+                <div className="project-info">
+                  <span className="project-name">{project.name}</span>
                 </div>
-              </Link>
+              </div>
             )
         )}
       </div>
