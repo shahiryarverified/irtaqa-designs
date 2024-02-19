@@ -12,6 +12,13 @@ const Service = () => {
           Back
         </button>
       </div>
+      <div className="marquee">
+        <p>
+          This Architecture Service is Under Maintenance. This Architecture
+          Service is Under Maintenance. This Architecture Service is Under
+          Maintenance.
+        </p>
+      </div>
     </div>
   );
 };

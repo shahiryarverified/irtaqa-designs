@@ -59,9 +59,9 @@
   /* Keyframes for the sliding animation */
   @keyframes slide-animation {
     0% {
-      transform: translateX(120%);
+      transform: translateX(100%);
     }
     100% {
-      transform: translateX(-120%);
+      transform: translateX(-170%);
     }
   }
