@@ -1,7 +1,6 @@
 @media (max-width:768px) {
   .footer-content{
     flex-direction: column;
-    gap: 10px !important;
   }
 }
 
@@ -11,7 +10,6 @@
   }
   .footer-content{
     justify-content: flex-start;
-    gap: 50px !important;
   }
 }
 
@@ -28,9 +26,9 @@
   }
 
   .footer-content {
-    display: flex;
-    gap: 100px;
-    justify-content: center;
+    display: flex;  
+    min-width: 80%;
+    align-self: center;
   }
   
   .footer-section {
@@ -52,6 +50,7 @@
   }
   
   .footer-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
     min-height: 100px;
@@ -111,4 +110,8 @@
 
   .social-icon:hover{
     color: #21346E;
+  }
+
+  .footer-map{
+    flex: 2;
   }
