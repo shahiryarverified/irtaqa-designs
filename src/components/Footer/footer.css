@@ -1,6 +1,7 @@
 @media (max-width:768px) {
   .footer-content{
     flex-direction: column;
+    gap: 10px !important;
   }
 }
 
@@ -10,21 +11,26 @@
   }
   .footer-content{
     justify-content: flex-start;
+    gap: 50px !important;
   }
 }
 
 .footer {
     display: flex;
     justify-content: center;
-    padding: 80px;
+    flex-direction: column;
     background-color: #f8f8f8;
     font-family: 'Arial', sans-serif;
   }
-  
+
+  .footer h2 {
+    text-align: left;
+  }
+
   .footer-content {
     display: flex;
-    align-items: center;
-    min-width: 70%;
+    gap: 100px;
+    justify-content: center;
   }
   
   .footer-section {
@@ -33,7 +39,10 @@
   }
   
   .footer-logo {
-    max-width: 90%;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 20px;
+    height: auto;
   }
   
   .links-section {
@@ -76,14 +85,25 @@
   .footer-column h4 {
     margin: 0;
   }
+
+  .footer-column.contact-us-info p {
+    margin-top: 20px;
+  }
   
   .social-section {
     display: flex;
     flex-direction: row;
-    padding-top: 20px;
-    justify-content: space-around;
+    padding: 20px;
+    justify-content: flex-end;
   }
-  
+  .social-section :not(:first-child) {
+    margin-left: 20px; /* Add margin to create space between the first and the other children */
+  }
+  .social-section :first-child {
+    margin-right: auto; /* Align the first child to the left */
+    margin-left: 20px; /* Align the first child to the left */
+  }
+
   .social-icon {
     color: #8B0000;
     margin-right: 10px;
@@ -91,8 +111,4 @@
 
   .social-icon:hover{
     color: #21346E;
-  }
-
-  .footer-map{
-    padding: 30px;
   }

@@ -29,54 +29,125 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+      <img src={image} alt="Irtaqa Designs Logo" className="footer-logo" />
       <div className="footer-content">
-        <div className="footer-section logo-section">
-          <img src={image} alt="Irtaqa Designs Logo" className="footer-logo" />
-          <p>© 2023 Irtaqa designs. All rights reserved</p>
-          <div className="footer-section social-section">
+        <div className="footer-column">
+          <h2>Menu</h2>
+          <Link
+            to="/"
+            onClick={() => {
+              setTargetDiv(0);
+              setTargetDiv(document.querySelector("#main"));
+            }}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            onClick={() => {
+              setTargetDiv(0);
+              setTimeout(() => {
+                const section = document.querySelector(".story");
+                if (section) {
+                  setTargetDiv(section);
+                }
+              }, 0);
+            }}
+          >
+            About
+          </Link>
+          <Link
+            to="/team"
+            onClick={() => {
+              setTargetDiv(0);
+              setTimeout(() => {
+                const section = document.querySelector(".team-section");
+                if (section) {
+                  setTargetDiv(section);
+                }
+              }, 0);
+            }}
+          >
+            Team
+          </Link>
+          <Link
+            to="/projects"
+            onClick={() => {
+              setTargetDiv(0);
+              setTimeout(() => {
+                const section = document.querySelector(".projects-section");
+                if (section) {
+                  setTargetDiv(section);
+                }
+              }, 0);
+            }}
+          >
+            Projects
+          </Link>
+          <Link
+            to="/"
+            onClick={() => {
+              setTargetDiv(0);
+              setTimeout(() => {
+                const section = document.querySelector(".our-clients-section");
+                if (section) {
+                  setTargetDiv(section);
+                }
+              }, 0);
+            }}
+          >
+            Clients
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => {
+              setTargetDiv(0);
+              setTimeout(() => {
+                const section = document.querySelector(".contact-us-section");
+                if (section) {
+                  setTargetDiv(section);
+                }
+              }, 0);
+            }}
+          >
+            Contact
+          </Link>
+        </div>
+        <div className="footer-column">
+          <h2>Our Services</h2>
+          <Link
+            to={"/services"}
+            onClick={() => {
+              setTargetDiv(0);
+              setTimeout(() => {
+                const section = document.querySelector(".services");
+                if (section) {
+                  setTargetDiv(section);
+                }
+              }, 0);
+            }}
+          >
+            Services
+          </Link>
+          {services.map((service, index) => (
             <Link
-              to={"/"}
+              key={index}
+              to={`/service/${index + 1}`}
               onClick={() => {
-                setTargetDiv(0);
                 setTimeout(() => {
-                  const section = document.querySelector("#main");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }, 10);
               }}
             >
-              <Twitter className="social-icon" />
+              {service.title}
             </Link>
-            <Link
-              to={"/"}
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector("#main");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              <Facebook className="social-icon" />
-            </Link>
-            <Link
-              to={"/"}
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector("#main");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              <Instagram className="social-icon" />
-            </Link>
-          </div>
+          ))}
+        </div>
+        <div className="footer-column contact-us-info">
+          <h2>Contact Us</h2>
+          <p>+92-3009596802</p>
+          <p>contact@irtaqadesigns</p>
+          <p>DHA4,Lahore,Pakistan</p>
         </div>
         <div className="footer-map">
           <iframe
@@ -85,7 +156,7 @@ const Footer = () => {
             data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6806.372598311991!2d74.384357!3d31.464061000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905dd16ba25d7%3A0xbae9c86693ece994!2sIrtiqa%20Designs!5e0!3m2!1sen!2sus!4v1704393506183!5m2!1sen!2sus"
             width="250"
             height="250"
-            style={{ border: 0 }}
+            style={{ width: "100%", height: "100%", border: 0 }}
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -94,123 +165,51 @@ const Footer = () => {
             className="entered litespeed-loaded"
           ></iframe>
         </div>
-        <div className="footer-section links-section">
-          <div className="footer-column">
-            <Link
-              to="/"
-              onClick={() => {
-                setTargetDiv(0);
-                setTargetDiv(document.querySelector("#main"));
-              }}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector(".story");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              About
-            </Link>
-            <Link
-              to="/team"
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector(".team-section");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              Team
-            </Link>
-          </div>
-          <div className="footer-column">
-            <Link
-              to="/projects"
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector(".projects-section");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              Projects
-            </Link>
-            <Link
-              to="/"
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector(
-                    ".our-clients-section"
-                  );
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              Clients
-            </Link>
-            <Link
-              to="/contact"
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector(".contact-us-section");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              Contact
-            </Link>
-          </div>
-          <div className="footer-column">
-            <Link
-              to={"/services"}
-              onClick={() => {
-                setTargetDiv(0);
-                setTimeout(() => {
-                  const section = document.querySelector(".services");
-                  if (section) {
-                    setTargetDiv(section);
-                  }
-                }, 0);
-              }}
-            >
-              Services
-            </Link>
-            {services.map((service, index) => (
-              <Link
-                style={{ marginLeft: "20px" }}
-                key={index}
-                to={`/service/${index + 1}`}
-                onClick={() => {
-                  setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }, 10);
-                }}
-              >
-                {service.title}
-              </Link>
-            ))}
-          </div>
-        </div>
+      </div>
+      <div className="footer-section social-section">
+        <p>© 2023 Irtaqa designs. All rights reserved</p>
+        <Link
+          to={"/"}
+          onClick={() => {
+            setTargetDiv(0);
+            setTimeout(() => {
+              const section = document.querySelector("#main");
+              if (section) {
+                setTargetDiv(section);
+              }
+            }, 0);
+          }}
+        >
+          <Twitter className="social-icon" />
+        </Link>
+        <Link
+          to={"/"}
+          onClick={() => {
+            setTargetDiv(0);
+            setTimeout(() => {
+              const section = document.querySelector("#main");
+              if (section) {
+                setTargetDiv(section);
+              }
+            }, 0);
+          }}
+        >
+          <Facebook className="social-icon" />
+        </Link>
+        <Link
+          to={"/"}
+          onClick={() => {
+            setTargetDiv(0);
+            setTimeout(() => {
+              const section = document.querySelector("#main");
+              if (section) {
+                setTargetDiv(section);
+              }
+            }, 0);
+          }}
+        >
+          <Instagram className="social-icon" />
+        </Link>
       </div>
     </footer>
   );
